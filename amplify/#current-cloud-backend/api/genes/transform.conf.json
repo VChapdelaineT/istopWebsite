@@ -1,7 +1,0 @@
-{
-    "Version": 5,
-    "StackMapping": {
-        "QuerygeneResolver": "HomoSapiens"
-    },
-    "ElasticsearchWarning": true
-}
