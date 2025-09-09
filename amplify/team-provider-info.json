@@ -1,0 +1,15 @@
+{
+  "master": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-istopwebsite-master-e8f22-authRole",
+      "UnauthRoleArn": "arn:aws:iam::345472211644:role/amplify-istopwebsite-master-e8f22-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::345472211644:role/amplify-istopwebsite-master-e8f22-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-istopwebsite-master-e8f22-deployment",
+      "UnauthRoleName": "amplify-istopwebsite-master-e8f22-unauthRole",
+      "StackName": "amplify-istopwebsite-master-e8f22",
+      "StackId": "arn:aws:cloudformation:us-east-1:345472211644:stack/amplify-istopwebsite-master-e8f22/46a95950-8cdd-11f0-a31e-12eb8dbf4435",
+      "AmplifyAppId": "d3tm8b7kotrrca"
+    }
+  }
+}
