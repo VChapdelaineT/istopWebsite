@@ -9,10 +9,11 @@ frontend:
   phases:
     preBuild:
       commands:
-        - yarn install
+        - nvm use $VERSION_NODE_12
+        - npm install --legacy-peer-deps
     build:
       commands:
-        - yarn run build
+        - npm run build
   artifacts:
     baseDirectory: /public
     files:
