@@ -1,13 +1,12 @@
-# amplify.yml
 version: 1
 frontend:
   phases:
     preBuild:
       commands:
-        - npm ci --legacy-peer-deps
+        - yarn install
     build:
       commands:
-        - npm run build
+        - yarn run build
   artifacts:
     baseDirectory: dist
     files:
