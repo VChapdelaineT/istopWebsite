@@ -8,8 +8,8 @@
   "javascript": {
     "framework": "react",
     "config": {
-      "SourceDir": "src",
-      "DistributionDir": "build",
+      "SourceDir": "/Users/vchap/Desktop/Guessepe/istopWebsite/src",
+      "DistributionDir": "/Users/vchap/Desktop/Guessepe/istopWebsite",
       "BuildCommand": "npm run-script build",
       "StartCommand": "npm run-script start"
     }
