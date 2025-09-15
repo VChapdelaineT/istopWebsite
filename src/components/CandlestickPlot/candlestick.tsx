@@ -626,7 +626,7 @@ export class CandlestickResults extends React.Component<CandlestickProps, Candle
                         <label className="filterBody"><input type="radio" className="rightSideButton" onClick={this.setTreatment("UNT")} checked={this.state.radioChecked.get("UNT")}/>&nbsp;Untreated</label>
                       </div>
                       <div className= "filterColumn">
-                        <input type="checkbox" className="rightSideButton" onClick={this.setPValueLessThan("UNT")} checked={this.state.pValueLessThan.get("UNT")}></input>
+                        {this.state.treatment != 'UNT' ?<input type="checkbox" className="rightSideButton" onClick={this.setPValueLessThan("UNT")} checked={this.state.pValueLessThan.get("UNT")}></input>: <label></label>}
                       </div>
                       <div className= "filterColumn">
                         <label className="filterBody"><input type="radio" className="rightSideButton" onClick={this.setCellLine("MCF10A")} checked={this.state.radioCheckedCell.get("MCF10A")}/>&nbsp;MCF10A</label>
@@ -636,10 +636,10 @@ export class CandlestickResults extends React.Component<CandlestickProps, Candle
 
                     <div className="filterRow secondFilterRow">
                       <div className="filterColumn">
-                        <label className="filterBody"><input type="radio" className="rightSideButton" onClick={this.setTreatment("CISP")} checked={this.state.radioChecked.get("CISP")}/>&nbsp;Cisplatin</label>
+                        {this.state.curPressedCell != 'MDAMB231' ? <label className="filterBody"><input type="radio" className="rightSideButton" onClick={this.setTreatment("CISP")} checked={this.state.radioChecked.get("CISP")}/>&nbsp;Cisplatin</label>: <label></label>}
                       </div>
                       <div className="filterColumn">
-                        <input type="checkbox" className="rightSideButton" onClick={this.setPValueLessThan("CISP")} checked={this.state.pValueLessThan.get("CISP")}></input>
+                        {this.state.treatment != 'CISP' ? <input type="checkbox" className="rightSideButton" onClick={this.setPValueLessThan("CISP")} checked={this.state.pValueLessThan.get("CISP")}></input>: <label></label>}
                       </div>
                       <div className= "filterColumn">
                         {this.state.renderConfigData.lollipopsMCF7.length > 0 ? <label className="filterBody"><input type="radio" className="rightSideButton" onClick={this.setCellLine("MCF7")} checked={this.state.radioCheckedCell.get("MCF7")}/>&nbsp;MCF7</label> : <label></label>}
@@ -648,10 +648,10 @@ export class CandlestickResults extends React.Component<CandlestickProps, Candle
                     
                     <div className="filterRow secondFilterRow">
                       <div className="filterColumn">
-                        <label className="filterBody"><input type="radio" className="rightSideButton" onClick={this.setTreatment("OLAP")} checked={this.state.radioChecked.get("OLAP")}/>&nbsp;Olaparib</label>
+                        {this.state.curPressedCell != 'MDAMB231' ? <label className="filterBody"><input type="radio" className="rightSideButton" onClick={this.setTreatment("OLAP")} checked={this.state.radioChecked.get("OLAP")}/>&nbsp;Olaparib</label>: <label></label>}
                       </div>
                       <div className="filterColumn">
-                        <input type="checkbox" className="rightSideButton" onClick={this.setPValueLessThan("OLAP")} checked={this.state.pValueLessThan.get("OLAP")}></input>
+                        {this.state.treatment != 'OLAP' ? <input type="checkbox" className="rightSideButton" onClick={this.setPValueLessThan("OLAP")} checked={this.state.pValueLessThan.get("OLAP")}></input>: <label></label>}
                       </div>
                       <div className= "filterColumn">
                         {this.state.renderConfigData.lollipopsMDAMB231.length > 0 ? <label className="filterBody"><input type="radio" className="rightSideButton" onClick={this.setCellLine("MDAMB231")} checked={this.state.radioCheckedCell.get("MDAMB231")}/>&nbsp;MDA-MB-231</label> : <label></label>}
@@ -660,19 +660,19 @@ export class CandlestickResults extends React.Component<CandlestickProps, Candle
                     
                     <div className="filterRow secondFilterRow">
                       <div className="filterColumn">
-                        <label className="filterBody"><input type="radio" className="rightSideButton" onClick={this.setTreatment("DOX")} checked={this.state.radioChecked.get("DOX")}/>&nbsp;Doxorubicin</label>
+                        {this.state.curPressedCell != 'MDAMB231' ? <label className="filterBody"><input type="radio" className="rightSideButton" onClick={this.setTreatment("DOX")} checked={this.state.radioChecked.get("DOX")}/>&nbsp;Doxorubicin</label>: <label></label>}
                       </div>
                       <div className="filterColumn">
-                        <input type="checkbox" className="rightSideButton" onClick={this.setPValueLessThan("DOX")} checked={this.state.pValueLessThan.get("DOX")}></input>
+                        {this.state.treatment != 'DOX' ?<input type="checkbox" className="rightSideButton" onClick={this.setPValueLessThan("DOX")} checked={this.state.pValueLessThan.get("DOX")}></input>: <label></label>}
                       </div>
                     </div>
                     
                     <div className="filterRow secondFilterRow">
                       <div className="filterColumn">
-                        <label className="filterBody"><input type="radio" className="rightSideButton" onClick={this.setTreatment("CPT")} checked={this.state.radioChecked.get("CPT")}/>&nbsp;Camptothecin</label>
+                        {this.state.curPressedCell != 'MDAMB231' ? <label className="filterBody"><input type="radio" className="rightSideButton" onClick={this.setTreatment("CPT")} checked={this.state.radioChecked.get("CPT")}/>&nbsp;Camptothecin</label>: <label></label>}
                       </div>
                       <div className="filterColumn">
-                        <input type="checkbox" className="rightSideButton" onClick={this.setPValueLessThan("CPT")} checked={this.state.pValueLessThan.get("CPT")}></input>
+                        {this.state.treatment != 'CPT' ?<input type="checkbox" className="rightSideButton" onClick={this.setPValueLessThan("CPT")} checked={this.state.pValueLessThan.get("CPT")}></input>: <label></label>}
                       </div>
                     </div>
                   </div>
