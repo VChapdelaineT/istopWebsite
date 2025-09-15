@@ -113,10 +113,19 @@ const getGeneLollipopGraph = /* GraphQL */ `query GetGeneLollipopGraph($id: ID!)
         }
         nextToken
       }
-    domains {
-      nextToken
-      __typename
-    }
+      domains {
+        items {
+          id
+          accessionNumber
+          type
+          start
+          end
+          gene
+          identifier
+          color
+        }
+        nextToken
+      }
     createdAt
     updatedAt
     __typename
