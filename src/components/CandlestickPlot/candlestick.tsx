@@ -85,11 +85,6 @@ const tableHeaderTranslation = new Map(
   ]
 )
 
-const lollipopMap: Record<string, any> = {
-  MCF10A: this.state.renderConfigData.lollipops,
-  MCF7: this.state.renderConfigData.lollipopsMCF7,
-  MDAMB231: this.state.renderConfigData.lollipopsMDAMB231,
-};
 
 export class CandlestickResults extends React.Component<CandlestickProps, CandlestickState> {
 
@@ -101,7 +96,7 @@ export class CandlestickResults extends React.Component<CandlestickProps, Candle
             funCheckBoxChecked: new Map<string, boolean>([["nonsense",false], ["missense",false],["splice",false],["synonymous",false],["other",false]]),
             pValueLessThan: new Map<string, boolean>([["UNT",false],["CISP",false],["OLAP",false],["DOX",false],["CPT",false]]),
             radioChecked: new Map<string, boolean>([["UNT",true],["CISP",false],["OLAP",false],["DOX",false],["CPT",false]]),
-            radioCheckedCell: new Map<string,boolean>([["MCF10A", true], ["MCF7", false],['MDA-MB-231',false]]),
+            radioCheckedCell: new Map<string,boolean>([["MCF10A", true], ["MCF7", false],['MDAMB231',false]]),
             curPressedCell: "MCF10A",
             gene: "",
             treatment: "UNT",
@@ -165,9 +160,6 @@ export class CandlestickResults extends React.Component<CandlestickProps, Candle
         };
         API.graphql(graphqlOperation(getGeneLollipopGraph, query)).then(result => { //query first database
           const filteredLocations = this.filterLocations(result.data.getGeneLollipopGraph.lollipopLocations.items)
-        }).catch(err => {
-          console.log(err)
-        })
           API.graphql(graphqlOperation(getGeneLollipopGraph, query)).then(secondQueryResult => {//query second database
             const filteredMCF7 = this.filterLocations(secondQueryResult.data.getGeneLollipopGraph.lollipopLocationsMCF7.items)
         }).catch(err => {
@@ -222,6 +214,7 @@ export class CandlestickResults extends React.Component<CandlestickProps, Candle
             })
             this.updateState(filteredLocations, filteredMCF7,filteredMDAMB231);
           });
+})
     }
 
     lollipopUIState = (location, isSelected) => {
@@ -254,7 +247,7 @@ export class CandlestickResults extends React.Component<CandlestickProps, Candle
                     hugoGeneSymbol: 'Log Fold Change',
                     lollipops: filteredLocations,
                     lollipopsMCF7: filteredMCF7,
-                    filteredMDAMB231 : filteredMDAMB231
+                    filteredMDAMB231: filteredMDAMB231
                   }
             }
     });
