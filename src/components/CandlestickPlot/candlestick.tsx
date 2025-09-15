@@ -8,7 +8,122 @@ const { ExportCSVButton } = CSVExport;
 import { HashRouter as Router, Switch } from "react-router-dom";
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
-import { getGeneLollipopGraph } from "../../../src/graphql/queries.ts";
+
+
+const getGeneLollipopGraph = /* GraphQL */ `query GetGeneLollipopGraph($id: ID!) {
+  getGeneLollipopGraph(id: $id) {
+    id
+    transcriptId
+    transcriptId2
+    numberOfAAS
+    lollipopLocations {
+        items {
+          id
+          gene
+          sgRNASequence
+          function
+          aapos
+          aachg
+          clinVar
+          clinVar_ID
+          lfcUNT
+          pvalueUNT
+          fdrUNT
+          lfcCISP
+          pvalueCISP
+          fdrCISP
+          lfcOLAP
+          pvalueOLAP
+          fdrOLAP
+          lfcDOX
+          pvalueDOX
+          fdrDOX
+          lfcCPT
+          pvalueCPT
+          fdrCPT
+          tCGA
+          pTMsiteLoc
+          noncanonicalTranscript
+          cellLine
+        }
+        nextToken
+      }
+    lollipopLocationsMCF7 {
+        items {
+          id
+          gene
+          sgRNASequence
+          function
+          aapos
+          aachg
+          clinVar
+          clinVar_ID
+          lfcUNT
+          pvalueUNT
+          fdrUNT
+          lfcCISP
+          pvalueCISP
+          fdrCISP
+          lfcOLAP
+          pvalueOLAP
+          fdrOLAP
+          lfcDOX
+          pvalueDOX
+          fdrDOX
+          lfcCPT
+          pvalueCPT
+          fdrCPT
+          tCGA
+          pTMsiteLoc
+          noncanonicalTranscript
+          cellLine
+        }
+        nextToken
+      }
+    lollipopLocationsMDAMB231 {
+        items {
+          id
+          gene
+          sgRNASequence
+          function
+          aapos
+          aachg
+          clinVar
+          clinVar_ID
+          lfcUNT
+          nlfcUNT
+          pvalueUNT
+          fdrUNT
+          lfcCISP
+          pvalueCISP
+          fdrCISP
+          lfcOLAP
+          pvalueOLAP
+          fdrOLAP
+          lfcDOX
+          pvalueDOX
+          fdrDOX
+          lfcCPT
+          pvalueCPT
+          fdrCPT
+          tCGA
+          pTMsiteLoc
+          noncanonicalTranscript
+          cellLine
+        }
+        nextToken
+      }
+    domains {
+      nextToken
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+`
+
 
 interface CandlestickProps {
   setMode: (e: any) => void;
