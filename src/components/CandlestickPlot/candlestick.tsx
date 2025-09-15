@@ -8,7 +8,7 @@ const { ExportCSVButton } = CSVExport;
 import { HashRouter as Router, Switch } from "react-router-dom";
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
-import { getGeneLollipopGraph } from "src/graphql/queries";
+import { getGeneLollipopGraph } from "../../../src/graphql/queries.ts";
 
 interface CandlestickProps {
   setMode: (e: any) => void;
