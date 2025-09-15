@@ -654,7 +654,7 @@ export class CandlestickResults extends React.Component<CandlestickProps, Candle
                         <input type="checkbox" className="rightSideButton" onClick={this.setPValueLessThan("OLAP")} checked={this.state.pValueLessThan.get("OLAP")}></input>
                       </div>
                       <div className= "filterColumn">
-                        {this.state.renderConfigData.lollipopsMDAMB231.length > 0 ? <label className="filterBody"><input type="radio" className="rightSideButton" onClick={this.setCellLine("MDAMB321")} checked={this.state.radioCheckedCell.get("MDAMB321")}/>&nbsp;MDA-MB-321</label> : <label></label>}
+                        {this.state.renderConfigData.lollipopsMDAMB231.length > 0 ? <label className="filterBody"><input type="radio" className="rightSideButton" onClick={this.setCellLine("MDAMB231")} checked={this.state.radioCheckedCell.get("MDAMB231")}/>&nbsp;MDA-MB-231</label> : <label></label>}
                       </div>
                     </div>
                     
