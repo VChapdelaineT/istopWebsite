@@ -94,18 +94,6 @@ const getGeneLollipopGraph = /* GraphQL */ `query GetGeneLollipopGraph($id: ID!)
           nlfcUNT
           pvalueUNT
           fdrUNT
-          lfcCISP
-          pvalueCISP
-          fdrCISP
-          lfcOLAP
-          pvalueOLAP
-          fdrOLAP
-          lfcDOX
-          pvalueDOX
-          fdrDOX
-          lfcCPT
-          pvalueCPT
-          fdrCPT
           tCGA
           pTMsiteLoc
           noncanonicalTranscript
