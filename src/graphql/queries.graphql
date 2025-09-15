@@ -1,14 +1,6 @@
-/* tslint:disable */
-/* eslint-disable */
-// this is an auto generated file. This will be overwritten
+# this is an auto generated file. This will be overwritten
 
-import * as APITypes from "../API";
-type GeneratedQuery<InputType, OutputType> = string & {
-  __generatedQueryInput: InputType;
-  __generatedQueryOutput: OutputType;
-};
-
-export const getHomoSapiens = /* GraphQL */ `query GetHomoSapiens($id: ID!) {
+query GetHomoSapiens($id: ID!) {
   getHomoSapiens(id: $id) {
     aa_target
     chr
@@ -48,11 +40,8 @@ export const getHomoSapiens = /* GraphQL */ `query GetHomoSapiens($id: ID!) {
     __typename
   }
 }
-` as GeneratedQuery<
-  APITypes.GetHomoSapiensQueryVariables,
-  APITypes.GetHomoSapiensQuery
->;
-export const listHomoSapienss = /* GraphQL */ `query ListHomoSapienss(
+
+query ListHomoSapienss(
   $filter: ModelHomoSapiensFilterInput
   $limit: Int
   $nextToken: String
@@ -100,11 +89,8 @@ export const listHomoSapienss = /* GraphQL */ `query ListHomoSapienss(
     __typename
   }
 }
-` as GeneratedQuery<
-  APITypes.ListHomoSapienssQueryVariables,
-  APITypes.ListHomoSapienssQuery
->;
-export const getYeast = /* GraphQL */ `query GetYeast($id: ID!) {
+
+query GetYeast($id: ID!) {
   getYeast(id: $id) {
     aa_target
     chr
@@ -143,8 +129,8 @@ export const getYeast = /* GraphQL */ `query GetYeast($id: ID!) {
     __typename
   }
 }
-` as GeneratedQuery<APITypes.GetYeastQueryVariables, APITypes.GetYeastQuery>;
-export const listYeasts = /* GraphQL */ `query ListYeasts(
+
+query ListYeasts(
   $filter: ModelYeastFilterInput
   $limit: Int
   $nextToken: String
@@ -191,11 +177,8 @@ export const listYeasts = /* GraphQL */ `query ListYeasts(
     __typename
   }
 }
-` as GeneratedQuery<
-  APITypes.ListYeastsQueryVariables,
-  APITypes.ListYeastsQuery
->;
-export const getFish = /* GraphQL */ `query GetFish($id: ID!) {
+
+query GetFish($id: ID!) {
   getFish(id: $id) {
     aa_target
     chr
@@ -234,8 +217,8 @@ export const getFish = /* GraphQL */ `query GetFish($id: ID!) {
     __typename
   }
 }
-` as GeneratedQuery<APITypes.GetFishQueryVariables, APITypes.GetFishQuery>;
-export const listFishs = /* GraphQL */ `query ListFishs(
+
+query ListFishs(
   $filter: ModelFishFilterInput
   $limit: Int
   $nextToken: String
@@ -282,8 +265,8 @@ export const listFishs = /* GraphQL */ `query ListFishs(
     __typename
   }
 }
-` as GeneratedQuery<APITypes.ListFishsQueryVariables, APITypes.ListFishsQuery>;
-export const getMouse = /* GraphQL */ `query GetMouse($id: ID!) {
+
+query GetMouse($id: ID!) {
   getMouse(id: $id) {
     aa_target
     chr
@@ -322,8 +305,8 @@ export const getMouse = /* GraphQL */ `query GetMouse($id: ID!) {
     __typename
   }
 }
-` as GeneratedQuery<APITypes.GetMouseQueryVariables, APITypes.GetMouseQuery>;
-export const listMouses = /* GraphQL */ `query ListMouses(
+
+query ListMouses(
   $filter: ModelMouseFilterInput
   $limit: Int
   $nextToken: String
@@ -370,11 +353,8 @@ export const listMouses = /* GraphQL */ `query ListMouses(
     __typename
   }
 }
-` as GeneratedQuery<
-  APITypes.ListMousesQueryVariables,
-  APITypes.ListMousesQuery
->;
-export const getFly = /* GraphQL */ `query GetFly($id: ID!) {
+
+query GetFly($id: ID!) {
   getFly(id: $id) {
     aa_target
     chr
@@ -413,8 +393,8 @@ export const getFly = /* GraphQL */ `query GetFly($id: ID!) {
     __typename
   }
 }
-` as GeneratedQuery<APITypes.GetFlyQueryVariables, APITypes.GetFlyQuery>;
-export const listFlys = /* GraphQL */ `query ListFlys($filter: ModelFlyFilterInput, $limit: Int, $nextToken: String) {
+
+query ListFlys($filter: ModelFlyFilterInput, $limit: Int, $nextToken: String) {
   listFlys(filter: $filter, limit: $limit, nextToken: $nextToken) {
     items {
       aa_target
@@ -457,8 +437,8 @@ export const listFlys = /* GraphQL */ `query ListFlys($filter: ModelFlyFilterInp
     __typename
   }
 }
-` as GeneratedQuery<APITypes.ListFlysQueryVariables, APITypes.ListFlysQuery>;
-export const getNematode = /* GraphQL */ `query GetNematode($id: ID!) {
+
+query GetNematode($id: ID!) {
   getNematode(id: $id) {
     aa_target
     chr
@@ -496,11 +476,8 @@ export const getNematode = /* GraphQL */ `query GetNematode($id: ID!) {
     __typename
   }
 }
-` as GeneratedQuery<
-  APITypes.GetNematodeQueryVariables,
-  APITypes.GetNematodeQuery
->;
-export const listNematodes = /* GraphQL */ `query ListNematodes(
+
+query ListNematodes(
   $filter: ModelNematodeFilterInput
   $limit: Int
   $nextToken: String
@@ -546,11 +523,8 @@ export const listNematodes = /* GraphQL */ `query ListNematodes(
     __typename
   }
 }
-` as GeneratedQuery<
-  APITypes.ListNematodesQueryVariables,
-  APITypes.ListNematodesQuery
->;
-export const getPlant = /* GraphQL */ `query GetPlant($id: ID!) {
+
+query GetPlant($id: ID!) {
   getPlant(id: $id) {
     aa_target
     chr
@@ -589,8 +563,8 @@ export const getPlant = /* GraphQL */ `query GetPlant($id: ID!) {
     __typename
   }
 }
-` as GeneratedQuery<APITypes.GetPlantQueryVariables, APITypes.GetPlantQuery>;
-export const listPlants = /* GraphQL */ `query ListPlants(
+
+query ListPlants(
   $filter: ModelPlantFilterInput
   $limit: Int
   $nextToken: String
@@ -637,11 +611,8 @@ export const listPlants = /* GraphQL */ `query ListPlants(
     __typename
   }
 }
-` as GeneratedQuery<
-  APITypes.ListPlantsQueryVariables,
-  APITypes.ListPlantsQuery
->;
-export const getRat = /* GraphQL */ `query GetRat($id: ID!) {
+
+query GetRat($id: ID!) {
   getRat(id: $id) {
     aa_target
     chr
@@ -680,8 +651,8 @@ export const getRat = /* GraphQL */ `query GetRat($id: ID!) {
     __typename
   }
 }
-` as GeneratedQuery<APITypes.GetRatQueryVariables, APITypes.GetRatQuery>;
-export const listRats = /* GraphQL */ `query ListRats($filter: ModelRatFilterInput, $limit: Int, $nextToken: String) {
+
+query ListRats($filter: ModelRatFilterInput, $limit: Int, $nextToken: String) {
   listRats(filter: $filter, limit: $limit, nextToken: $nextToken) {
     items {
       aa_target
@@ -724,8 +695,8 @@ export const listRats = /* GraphQL */ `query ListRats($filter: ModelRatFilterInp
     __typename
   }
 }
-` as GeneratedQuery<APITypes.ListRatsQueryVariables, APITypes.ListRatsQuery>;
-export const getAlias = /* GraphQL */ `query GetAlias($id: ID!) {
+
+query GetAlias($id: ID!) {
   getAlias(id: $id) {
     id
     alias
@@ -736,8 +707,8 @@ export const getAlias = /* GraphQL */ `query GetAlias($id: ID!) {
     __typename
   }
 }
-` as GeneratedQuery<APITypes.GetAliasQueryVariables, APITypes.GetAliasQuery>;
-export const listAliass = /* GraphQL */ `query ListAliass(
+
+query ListAliass(
   $filter: ModelAliasFilterInput
   $limit: Int
   $nextToken: String
@@ -756,11 +727,8 @@ export const listAliass = /* GraphQL */ `query ListAliass(
     __typename
   }
 }
-` as GeneratedQuery<
-  APITypes.ListAliassQueryVariables,
-  APITypes.ListAliassQuery
->;
-export const getGeneLollipopGraph = /* GraphQL */ `query GetGeneLollipopGraph($id: ID!) {
+
+query GetGeneLollipopGraph($id: ID!) {
   getGeneLollipopGraph(id: $id) {
     id
     transcriptId
@@ -770,11 +738,11 @@ export const getGeneLollipopGraph = /* GraphQL */ `query GetGeneLollipopGraph($i
       nextToken
       __typename
     }
-    lollipopLocationsMCF7 {
+    lollipopLocationsMDAMB231 {
       nextToken
       __typename
     }
-    lollipopLocationsMDAMB231 {
+    lollipopLocationsMCF7 {
       nextToken
       __typename
     }
@@ -787,11 +755,8 @@ export const getGeneLollipopGraph = /* GraphQL */ `query GetGeneLollipopGraph($i
     __typename
   }
 }
-` as GeneratedQuery<
-  APITypes.GetGeneLollipopGraphQueryVariables,
-  APITypes.GetGeneLollipopGraphQuery
->;
-export const listGeneLollipopGraphs = /* GraphQL */ `query ListGeneLollipopGraphs(
+
+query ListGeneLollipopGraphs(
   $filter: ModelGeneLollipopGraphFilterInput
   $limit: Int
   $nextToken: String
@@ -814,11 +779,8 @@ export const listGeneLollipopGraphs = /* GraphQL */ `query ListGeneLollipopGraph
     __typename
   }
 }
-` as GeneratedQuery<
-  APITypes.ListGeneLollipopGraphsQueryVariables,
-  APITypes.ListGeneLollipopGraphsQuery
->;
-export const getLollipopLocations = /* GraphQL */ `query GetLollipopLocations($id: ID!) {
+
+query GetLollipopLocations($id: ID!) {
   getLollipopLocations(id: $id) {
     id
     gene
@@ -852,11 +814,8 @@ export const getLollipopLocations = /* GraphQL */ `query GetLollipopLocations($i
     __typename
   }
 }
-` as GeneratedQuery<
-  APITypes.GetLollipopLocationsQueryVariables,
-  APITypes.GetLollipopLocationsQuery
->;
-export const listLollipopLocationss = /* GraphQL */ `query ListLollipopLocationss(
+
+query ListLollipopLocationss(
   $filter: ModelLollipopLocationsFilterInput
   $limit: Int
   $nextToken: String
@@ -902,11 +861,8 @@ export const listLollipopLocationss = /* GraphQL */ `query ListLollipopLocations
     __typename
   }
 }
-` as GeneratedQuery<
-  APITypes.ListLollipopLocationssQueryVariables,
-  APITypes.ListLollipopLocationssQuery
->;
-export const getLollipopLocationsMCF7 = /* GraphQL */ `query GetLollipopLocationsMCF7($id: ID!) {
+
+query GetLollipopLocationsMCF7($id: ID!) {
   getLollipopLocationsMCF7(id: $id) {
     id
     gene
@@ -940,11 +896,8 @@ export const getLollipopLocationsMCF7 = /* GraphQL */ `query GetLollipopLocation
     __typename
   }
 }
-` as GeneratedQuery<
-  APITypes.GetLollipopLocationsMCF7QueryVariables,
-  APITypes.GetLollipopLocationsMCF7Query
->;
-export const listLollipopLocationsMCF7s = /* GraphQL */ `query ListLollipopLocationsMCF7s(
+
+query ListLollipopLocationsMCF7s(
   $filter: ModelLollipopLocationsMCF7FilterInput
   $limit: Int
   $nextToken: String
@@ -990,39 +943,30 @@ export const listLollipopLocationsMCF7s = /* GraphQL */ `query ListLollipopLocat
     __typename
   }
 }
-` as GeneratedQuery<
-  APITypes.ListLollipopLocationsMCF7sQueryVariables,
-  APITypes.ListLollipopLocationsMCF7sQuery
->;
-export const getLollipopLocationsMDAMB231 = /* GraphQL */ `query GetLollipopLocationsMDAMB231($id: ID!) {
+
+query GetLollipopLocationsMDAMB231($id: ID!) {
   getLollipopLocationsMDAMB231(id: $id) {
-    id
     sgRNA_ID
     gene
-    sgRNASequence
-    function
-    aapos
-    aachg
-    clinVar
-    clinVar_ID
     lfcUNT
     pvalueUNT
     fdrUNT
+    sgRNASequence
+    function
+    clinVar
+    clinVar_ID
+    aapos
     nlfcUNT
     tCGA
     pTMsiteLoc
     noncanonicalTranscript
-    cellLine
     createdAt
     updatedAt
     __typename
   }
 }
-` as GeneratedQuery<
-  APITypes.GetLollipopLocationsMDAMB231QueryVariables,
-  APITypes.GetLollipopLocationsMDAMB231Query
->;
-export const listLollipopLocationsMDAMB231s = /* GraphQL */ `query ListLollipopLocationsMDAMB231s(
+
+query ListLollipopLocationsMDAMB231s(
   $filter: ModelLollipopLocationsMDAMB231FilterInput
   $limit: Int
   $nextToken: String
@@ -1033,23 +977,20 @@ export const listLollipopLocationsMDAMB231s = /* GraphQL */ `query ListLollipopL
     nextToken: $nextToken
   ) {
     items {
-      id
       sgRNA_ID
       gene
-      sgRNASequence
-      function
-      aapos
-      aachg
-      clinVar
-      clinVar_ID
       lfcUNT
       pvalueUNT
       fdrUNT
+      sgRNASequence
+      function
+      clinVar
+      clinVar_ID
+      aapos
       nlfcUNT
       tCGA
       pTMsiteLoc
       noncanonicalTranscript
-      cellLine
       createdAt
       updatedAt
       __typename
@@ -1058,11 +999,8 @@ export const listLollipopLocationsMDAMB231s = /* GraphQL */ `query ListLollipopL
     __typename
   }
 }
-` as GeneratedQuery<
-  APITypes.ListLollipopLocationsMDAMB231sQueryVariables,
-  APITypes.ListLollipopLocationsMDAMB231sQuery
->;
-export const getGeneLollipopGraphMCF7 = /* GraphQL */ `query GetGeneLollipopGraphMCF7($id: ID!) {
+
+query GetGeneLollipopGraphMCF7($id: ID!) {
   getGeneLollipopGraphMCF7(id: $id) {
     id
     transcriptId
@@ -1081,11 +1019,8 @@ export const getGeneLollipopGraphMCF7 = /* GraphQL */ `query GetGeneLollipopGrap
     __typename
   }
 }
-` as GeneratedQuery<
-  APITypes.GetGeneLollipopGraphMCF7QueryVariables,
-  APITypes.GetGeneLollipopGraphMCF7Query
->;
-export const listGeneLollipopGraphMCF7s = /* GraphQL */ `query ListGeneLollipopGraphMCF7s(
+
+query ListGeneLollipopGraphMCF7s(
   $filter: ModelGeneLollipopGraphMCF7FilterInput
   $limit: Int
   $nextToken: String
@@ -1108,11 +1043,8 @@ export const listGeneLollipopGraphMCF7s = /* GraphQL */ `query ListGeneLollipopG
     __typename
   }
 }
-` as GeneratedQuery<
-  APITypes.ListGeneLollipopGraphMCF7sQueryVariables,
-  APITypes.ListGeneLollipopGraphMCF7sQuery
->;
-export const getDomain = /* GraphQL */ `query GetDomain($id: ID!) {
+
+query GetDomain($id: ID!) {
   getDomain(id: $id) {
     id
     accessionNumber
@@ -1127,8 +1059,8 @@ export const getDomain = /* GraphQL */ `query GetDomain($id: ID!) {
     __typename
   }
 }
-` as GeneratedQuery<APITypes.GetDomainQueryVariables, APITypes.GetDomainQuery>;
-export const listDomains = /* GraphQL */ `query ListDomains(
+
+query ListDomains(
   $filter: ModelDomainFilterInput
   $limit: Int
   $nextToken: String
@@ -1151,11 +1083,8 @@ export const listDomains = /* GraphQL */ `query ListDomains(
     __typename
   }
 }
-` as GeneratedQuery<
-  APITypes.ListDomainsQueryVariables,
-  APITypes.ListDomainsQuery
->;
-export const getAuth = /* GraphQL */ `query GetAuth($id: ID!) {
+
+query GetAuth($id: ID!) {
   getAuth(id: $id) {
     id
     createdAt
@@ -1163,8 +1092,8 @@ export const getAuth = /* GraphQL */ `query GetAuth($id: ID!) {
     __typename
   }
 }
-` as GeneratedQuery<APITypes.GetAuthQueryVariables, APITypes.GetAuthQuery>;
-export const listAuths = /* GraphQL */ `query ListAuths(
+
+query ListAuths(
   $filter: ModelAuthFilterInput
   $limit: Int
   $nextToken: String
@@ -1180,8 +1109,8 @@ export const listAuths = /* GraphQL */ `query ListAuths(
     __typename
   }
 }
-` as GeneratedQuery<APITypes.ListAuthsQueryVariables, APITypes.ListAuthsQuery>;
-export const gene = /* GraphQL */ `query Gene(
+
+query Gene(
   $gene: String
   $sortDirection: ModelSortDirection
   $filter: ModelHomoSapiensFilterInput
@@ -1237,8 +1166,8 @@ export const gene = /* GraphQL */ `query Gene(
     __typename
   }
 }
-` as GeneratedQuery<APITypes.GeneQueryVariables, APITypes.GeneQuery>;
-export const newCancerType = /* GraphQL */ `query NewCancerType(
+
+query NewCancerType(
   $cancer_type: String
   $sortDirection: ModelSortDirection
   $filter: ModelHomoSapiensFilterInput
@@ -1294,11 +1223,8 @@ export const newCancerType = /* GraphQL */ `query NewCancerType(
     __typename
   }
 }
-` as GeneratedQuery<
-  APITypes.NewCancerTypeQueryVariables,
-  APITypes.NewCancerTypeQuery
->;
-export const geneYeast = /* GraphQL */ `query GeneYeast(
+
+query GeneYeast(
   $gene: String
   $sortDirection: ModelSortDirection
   $filter: ModelYeastFilterInput
@@ -1353,8 +1279,8 @@ export const geneYeast = /* GraphQL */ `query GeneYeast(
     __typename
   }
 }
-` as GeneratedQuery<APITypes.GeneYeastQueryVariables, APITypes.GeneYeastQuery>;
-export const geneFish = /* GraphQL */ `query GeneFish(
+
+query GeneFish(
   $gene: String
   $sortDirection: ModelSortDirection
   $filter: ModelFishFilterInput
@@ -1409,8 +1335,8 @@ export const geneFish = /* GraphQL */ `query GeneFish(
     __typename
   }
 }
-` as GeneratedQuery<APITypes.GeneFishQueryVariables, APITypes.GeneFishQuery>;
-export const geneMouse = /* GraphQL */ `query GeneMouse(
+
+query GeneMouse(
   $gene: String
   $sortDirection: ModelSortDirection
   $filter: ModelMouseFilterInput
@@ -1465,8 +1391,8 @@ export const geneMouse = /* GraphQL */ `query GeneMouse(
     __typename
   }
 }
-` as GeneratedQuery<APITypes.GeneMouseQueryVariables, APITypes.GeneMouseQuery>;
-export const geneFly = /* GraphQL */ `query GeneFly(
+
+query GeneFly(
   $gene: String
   $sortDirection: ModelSortDirection
   $filter: ModelFlyFilterInput
@@ -1521,8 +1447,8 @@ export const geneFly = /* GraphQL */ `query GeneFly(
     __typename
   }
 }
-` as GeneratedQuery<APITypes.GeneFlyQueryVariables, APITypes.GeneFlyQuery>;
-export const geneNematode = /* GraphQL */ `query GeneNematode(
+
+query GeneNematode(
   $gene: String
   $sortDirection: ModelSortDirection
   $filter: ModelNematodeFilterInput
@@ -1576,11 +1502,8 @@ export const geneNematode = /* GraphQL */ `query GeneNematode(
     __typename
   }
 }
-` as GeneratedQuery<
-  APITypes.GeneNematodeQueryVariables,
-  APITypes.GeneNematodeQuery
->;
-export const genePlant = /* GraphQL */ `query GenePlant(
+
+query GenePlant(
   $gene: String
   $sortDirection: ModelSortDirection
   $filter: ModelPlantFilterInput
@@ -1635,8 +1558,8 @@ export const genePlant = /* GraphQL */ `query GenePlant(
     __typename
   }
 }
-` as GeneratedQuery<APITypes.GenePlantQueryVariables, APITypes.GenePlantQuery>;
-export const geneRat = /* GraphQL */ `query GeneRat(
+
+query GeneRat(
   $gene: String
   $sortDirection: ModelSortDirection
   $filter: ModelRatFilterInput
@@ -1691,8 +1614,8 @@ export const geneRat = /* GraphQL */ `query GeneRat(
     __typename
   }
 }
-` as GeneratedQuery<APITypes.GeneRatQueryVariables, APITypes.GeneRatQuery>;
-export const byAlias = /* GraphQL */ `query ByAlias(
+
+query ByAlias(
   $alias: String
   $sortDirection: ModelSortDirection
   $filter: ModelAliasFilterInput
@@ -1719,4 +1642,3 @@ export const byAlias = /* GraphQL */ `query ByAlias(
     __typename
   }
 }
-` as GeneratedQuery<APITypes.ByAliasQueryVariables, APITypes.ByAliasQuery>;

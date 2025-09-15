@@ -1,15 +1,54 @@
-/* tslint:disable */
-/* eslint-disable */
-// this is an auto generated file. This will be overwritten
+# this is an auto generated file. This will be overwritten
 
-import * as APITypes from "../API";
-type GeneratedSubscription<InputType, OutputType> = string & {
-  __generatedSubscriptionInput: InputType;
-  __generatedSubscriptionOutput: OutputType;
-};
+mutation CreateHomoSapiens(
+  $input: CreateHomoSapiensInput!
+  $condition: ModelHomoSapiensConditionInput
+) {
+  createHomoSapiens(input: $input, condition: $condition) {
+    aa_target
+    chr
+    codon
+    gene
+    genome_coord
+    id
+    n_tx_in_gene
+    no_upstream_G
+    percent_NMD
+    percent_tx
+    rel_pos_largest_isoform
+    rFLP_Gain
+    rFLP_Loss
+    sgNGA
+    sgNGA_matches
+    sgNGA_spacing
+    sgNGG
+    sgNGG_matches
+    sgNGG_spacing
+    sgNGAG
+    sgNGAG_matches
+    sgNGAG_spacing
+    sgNGCG
+    sgNGCG_matches
+    sgNGCG_spacing
+    sgNNGRRT
+    sgNNGRRT_matches
+    sgNNGRRT_spacing
+    sgNNNRRT
+    sgNNNRRT_matches
+    sgNNNRRT_spacing
+    strand
+    cancer_type
+    createdAt
+    updatedAt
+    __typename
+  }
+}
 
-export const onCreateHomoSapiens = /* GraphQL */ `subscription OnCreateHomoSapiens {
-  onCreateHomoSapiens {
+mutation UpdateHomoSapiens(
+  $input: UpdateHomoSapiensInput!
+  $condition: ModelHomoSapiensConditionInput
+) {
+  updateHomoSapiens(input: $input, condition: $condition) {
     aa_target
     chr
     codon
@@ -48,12 +87,12 @@ export const onCreateHomoSapiens = /* GraphQL */ `subscription OnCreateHomoSapie
     __typename
   }
 }
-` as GeneratedSubscription<
-  APITypes.OnCreateHomoSapiensSubscriptionVariables,
-  APITypes.OnCreateHomoSapiensSubscription
->;
-export const onUpdateHomoSapiens = /* GraphQL */ `subscription OnUpdateHomoSapiens {
-  onUpdateHomoSapiens {
+
+mutation DeleteHomoSapiens(
+  $input: DeleteHomoSapiensInput!
+  $condition: ModelHomoSapiensConditionInput
+) {
+  deleteHomoSapiens(input: $input, condition: $condition) {
     aa_target
     chr
     codon
@@ -92,56 +131,12 @@ export const onUpdateHomoSapiens = /* GraphQL */ `subscription OnUpdateHomoSapie
     __typename
   }
 }
-` as GeneratedSubscription<
-  APITypes.OnUpdateHomoSapiensSubscriptionVariables,
-  APITypes.OnUpdateHomoSapiensSubscription
->;
-export const onDeleteHomoSapiens = /* GraphQL */ `subscription OnDeleteHomoSapiens {
-  onDeleteHomoSapiens {
-    aa_target
-    chr
-    codon
-    gene
-    genome_coord
-    id
-    n_tx_in_gene
-    no_upstream_G
-    percent_NMD
-    percent_tx
-    rel_pos_largest_isoform
-    rFLP_Gain
-    rFLP_Loss
-    sgNGA
-    sgNGA_matches
-    sgNGA_spacing
-    sgNGG
-    sgNGG_matches
-    sgNGG_spacing
-    sgNGAG
-    sgNGAG_matches
-    sgNGAG_spacing
-    sgNGCG
-    sgNGCG_matches
-    sgNGCG_spacing
-    sgNNGRRT
-    sgNNGRRT_matches
-    sgNNGRRT_spacing
-    sgNNNRRT
-    sgNNNRRT_matches
-    sgNNNRRT_spacing
-    strand
-    cancer_type
-    createdAt
-    updatedAt
-    __typename
-  }
-}
-` as GeneratedSubscription<
-  APITypes.OnDeleteHomoSapiensSubscriptionVariables,
-  APITypes.OnDeleteHomoSapiensSubscription
->;
-export const onCreateYeast = /* GraphQL */ `subscription OnCreateYeast {
-  onCreateYeast {
+
+mutation CreateYeast(
+  $input: CreateYeastInput!
+  $condition: ModelYeastConditionInput
+) {
+  createYeast(input: $input, condition: $condition) {
     aa_target
     chr
     codon
@@ -179,12 +174,12 @@ export const onCreateYeast = /* GraphQL */ `subscription OnCreateYeast {
     __typename
   }
 }
-` as GeneratedSubscription<
-  APITypes.OnCreateYeastSubscriptionVariables,
-  APITypes.OnCreateYeastSubscription
->;
-export const onUpdateYeast = /* GraphQL */ `subscription OnUpdateYeast {
-  onUpdateYeast {
+
+mutation UpdateYeast(
+  $input: UpdateYeastInput!
+  $condition: ModelYeastConditionInput
+) {
+  updateYeast(input: $input, condition: $condition) {
     aa_target
     chr
     codon
@@ -222,12 +217,12 @@ export const onUpdateYeast = /* GraphQL */ `subscription OnUpdateYeast {
     __typename
   }
 }
-` as GeneratedSubscription<
-  APITypes.OnUpdateYeastSubscriptionVariables,
-  APITypes.OnUpdateYeastSubscription
->;
-export const onDeleteYeast = /* GraphQL */ `subscription OnDeleteYeast {
-  onDeleteYeast {
+
+mutation DeleteYeast(
+  $input: DeleteYeastInput!
+  $condition: ModelYeastConditionInput
+) {
+  deleteYeast(input: $input, condition: $condition) {
     aa_target
     chr
     codon
@@ -265,12 +260,12 @@ export const onDeleteYeast = /* GraphQL */ `subscription OnDeleteYeast {
     __typename
   }
 }
-` as GeneratedSubscription<
-  APITypes.OnDeleteYeastSubscriptionVariables,
-  APITypes.OnDeleteYeastSubscription
->;
-export const onCreateFish = /* GraphQL */ `subscription OnCreateFish {
-  onCreateFish {
+
+mutation CreateFish(
+  $input: CreateFishInput!
+  $condition: ModelFishConditionInput
+) {
+  createFish(input: $input, condition: $condition) {
     aa_target
     chr
     codon
@@ -308,12 +303,12 @@ export const onCreateFish = /* GraphQL */ `subscription OnCreateFish {
     __typename
   }
 }
-` as GeneratedSubscription<
-  APITypes.OnCreateFishSubscriptionVariables,
-  APITypes.OnCreateFishSubscription
->;
-export const onUpdateFish = /* GraphQL */ `subscription OnUpdateFish {
-  onUpdateFish {
+
+mutation UpdateFish(
+  $input: UpdateFishInput!
+  $condition: ModelFishConditionInput
+) {
+  updateFish(input: $input, condition: $condition) {
     aa_target
     chr
     codon
@@ -351,12 +346,12 @@ export const onUpdateFish = /* GraphQL */ `subscription OnUpdateFish {
     __typename
   }
 }
-` as GeneratedSubscription<
-  APITypes.OnUpdateFishSubscriptionVariables,
-  APITypes.OnUpdateFishSubscription
->;
-export const onDeleteFish = /* GraphQL */ `subscription OnDeleteFish {
-  onDeleteFish {
+
+mutation DeleteFish(
+  $input: DeleteFishInput!
+  $condition: ModelFishConditionInput
+) {
+  deleteFish(input: $input, condition: $condition) {
     aa_target
     chr
     codon
@@ -394,12 +389,12 @@ export const onDeleteFish = /* GraphQL */ `subscription OnDeleteFish {
     __typename
   }
 }
-` as GeneratedSubscription<
-  APITypes.OnDeleteFishSubscriptionVariables,
-  APITypes.OnDeleteFishSubscription
->;
-export const onCreateMouse = /* GraphQL */ `subscription OnCreateMouse {
-  onCreateMouse {
+
+mutation CreateMouse(
+  $input: CreateMouseInput!
+  $condition: ModelMouseConditionInput
+) {
+  createMouse(input: $input, condition: $condition) {
     aa_target
     chr
     codon
@@ -437,12 +432,12 @@ export const onCreateMouse = /* GraphQL */ `subscription OnCreateMouse {
     __typename
   }
 }
-` as GeneratedSubscription<
-  APITypes.OnCreateMouseSubscriptionVariables,
-  APITypes.OnCreateMouseSubscription
->;
-export const onUpdateMouse = /* GraphQL */ `subscription OnUpdateMouse {
-  onUpdateMouse {
+
+mutation UpdateMouse(
+  $input: UpdateMouseInput!
+  $condition: ModelMouseConditionInput
+) {
+  updateMouse(input: $input, condition: $condition) {
     aa_target
     chr
     codon
@@ -480,12 +475,12 @@ export const onUpdateMouse = /* GraphQL */ `subscription OnUpdateMouse {
     __typename
   }
 }
-` as GeneratedSubscription<
-  APITypes.OnUpdateMouseSubscriptionVariables,
-  APITypes.OnUpdateMouseSubscription
->;
-export const onDeleteMouse = /* GraphQL */ `subscription OnDeleteMouse {
-  onDeleteMouse {
+
+mutation DeleteMouse(
+  $input: DeleteMouseInput!
+  $condition: ModelMouseConditionInput
+) {
+  deleteMouse(input: $input, condition: $condition) {
     aa_target
     chr
     codon
@@ -523,12 +518,12 @@ export const onDeleteMouse = /* GraphQL */ `subscription OnDeleteMouse {
     __typename
   }
 }
-` as GeneratedSubscription<
-  APITypes.OnDeleteMouseSubscriptionVariables,
-  APITypes.OnDeleteMouseSubscription
->;
-export const onCreateFly = /* GraphQL */ `subscription OnCreateFly {
-  onCreateFly {
+
+mutation CreateFly(
+  $input: CreateFlyInput!
+  $condition: ModelFlyConditionInput
+) {
+  createFly(input: $input, condition: $condition) {
     aa_target
     chr
     codon
@@ -566,12 +561,12 @@ export const onCreateFly = /* GraphQL */ `subscription OnCreateFly {
     __typename
   }
 }
-` as GeneratedSubscription<
-  APITypes.OnCreateFlySubscriptionVariables,
-  APITypes.OnCreateFlySubscription
->;
-export const onUpdateFly = /* GraphQL */ `subscription OnUpdateFly {
-  onUpdateFly {
+
+mutation UpdateFly(
+  $input: UpdateFlyInput!
+  $condition: ModelFlyConditionInput
+) {
+  updateFly(input: $input, condition: $condition) {
     aa_target
     chr
     codon
@@ -609,12 +604,12 @@ export const onUpdateFly = /* GraphQL */ `subscription OnUpdateFly {
     __typename
   }
 }
-` as GeneratedSubscription<
-  APITypes.OnUpdateFlySubscriptionVariables,
-  APITypes.OnUpdateFlySubscription
->;
-export const onDeleteFly = /* GraphQL */ `subscription OnDeleteFly {
-  onDeleteFly {
+
+mutation DeleteFly(
+  $input: DeleteFlyInput!
+  $condition: ModelFlyConditionInput
+) {
+  deleteFly(input: $input, condition: $condition) {
     aa_target
     chr
     codon
@@ -652,12 +647,12 @@ export const onDeleteFly = /* GraphQL */ `subscription OnDeleteFly {
     __typename
   }
 }
-` as GeneratedSubscription<
-  APITypes.OnDeleteFlySubscriptionVariables,
-  APITypes.OnDeleteFlySubscription
->;
-export const onCreateNematode = /* GraphQL */ `subscription OnCreateNematode {
-  onCreateNematode {
+
+mutation CreateNematode(
+  $input: CreateNematodeInput!
+  $condition: ModelNematodeConditionInput
+) {
+  createNematode(input: $input, condition: $condition) {
     aa_target
     chr
     codon
@@ -694,12 +689,12 @@ export const onCreateNematode = /* GraphQL */ `subscription OnCreateNematode {
     __typename
   }
 }
-` as GeneratedSubscription<
-  APITypes.OnCreateNematodeSubscriptionVariables,
-  APITypes.OnCreateNematodeSubscription
->;
-export const onUpdateNematode = /* GraphQL */ `subscription OnUpdateNematode {
-  onUpdateNematode {
+
+mutation UpdateNematode(
+  $input: UpdateNematodeInput!
+  $condition: ModelNematodeConditionInput
+) {
+  updateNematode(input: $input, condition: $condition) {
     aa_target
     chr
     codon
@@ -736,12 +731,12 @@ export const onUpdateNematode = /* GraphQL */ `subscription OnUpdateNematode {
     __typename
   }
 }
-` as GeneratedSubscription<
-  APITypes.OnUpdateNematodeSubscriptionVariables,
-  APITypes.OnUpdateNematodeSubscription
->;
-export const onDeleteNematode = /* GraphQL */ `subscription OnDeleteNematode {
-  onDeleteNematode {
+
+mutation DeleteNematode(
+  $input: DeleteNematodeInput!
+  $condition: ModelNematodeConditionInput
+) {
+  deleteNematode(input: $input, condition: $condition) {
     aa_target
     chr
     codon
@@ -778,55 +773,12 @@ export const onDeleteNematode = /* GraphQL */ `subscription OnDeleteNematode {
     __typename
   }
 }
-` as GeneratedSubscription<
-  APITypes.OnDeleteNematodeSubscriptionVariables,
-  APITypes.OnDeleteNematodeSubscription
->;
-export const onCreatePlant = /* GraphQL */ `subscription OnCreatePlant {
-  onCreatePlant {
-    aa_target
-    chr
-    codon
-    gene
-    genome_coord
-    id
-    n_tx_in_gene
-    no_upstream_G
-    percent_NMD
-    percent_tx
-    rel_pos_largest_isoform
-    rFLP_Loss
-    rFLP_Gain
-    sgNGG
-    sgNGG_matches
-    sgNGG_spacing
-    sgNGA
-    sgNGA_matches
-    sgNGA_spacing
-    sgNGAG
-    sgNGAG_matches
-    sgNGAG_spacing
-    sgNGCG
-    sgNGCG_matches
-    sgNGCG_spacing
-    sgNNGRRT
-    sgNNGRRT_matches
-    sgNNGRRT_spacing
-    sgNNNRRT
-    sgNNNRRT_matches
-    sgNNNRRT_spacing
-    strand
-    createdAt
-    updatedAt
-    __typename
-  }
-}
-` as GeneratedSubscription<
-  APITypes.OnCreatePlantSubscriptionVariables,
-  APITypes.OnCreatePlantSubscription
->;
-export const onUpdatePlant = /* GraphQL */ `subscription OnUpdatePlant {
-  onUpdatePlant {
+
+mutation CreatePlant(
+  $input: CreatePlantInput!
+  $condition: ModelPlantConditionInput
+) {
+  createPlant(input: $input, condition: $condition) {
     aa_target
     chr
     codon
@@ -864,12 +816,12 @@ export const onUpdatePlant = /* GraphQL */ `subscription OnUpdatePlant {
     __typename
   }
 }
-` as GeneratedSubscription<
-  APITypes.OnUpdatePlantSubscriptionVariables,
-  APITypes.OnUpdatePlantSubscription
->;
-export const onDeletePlant = /* GraphQL */ `subscription OnDeletePlant {
-  onDeletePlant {
+
+mutation UpdatePlant(
+  $input: UpdatePlantInput!
+  $condition: ModelPlantConditionInput
+) {
+  updatePlant(input: $input, condition: $condition) {
     aa_target
     chr
     codon
@@ -907,12 +859,55 @@ export const onDeletePlant = /* GraphQL */ `subscription OnDeletePlant {
     __typename
   }
 }
-` as GeneratedSubscription<
-  APITypes.OnDeletePlantSubscriptionVariables,
-  APITypes.OnDeletePlantSubscription
->;
-export const onCreateRat = /* GraphQL */ `subscription OnCreateRat {
-  onCreateRat {
+
+mutation DeletePlant(
+  $input: DeletePlantInput!
+  $condition: ModelPlantConditionInput
+) {
+  deletePlant(input: $input, condition: $condition) {
+    aa_target
+    chr
+    codon
+    gene
+    genome_coord
+    id
+    n_tx_in_gene
+    no_upstream_G
+    percent_NMD
+    percent_tx
+    rel_pos_largest_isoform
+    rFLP_Loss
+    rFLP_Gain
+    sgNGG
+    sgNGG_matches
+    sgNGG_spacing
+    sgNGA
+    sgNGA_matches
+    sgNGA_spacing
+    sgNGAG
+    sgNGAG_matches
+    sgNGAG_spacing
+    sgNGCG
+    sgNGCG_matches
+    sgNGCG_spacing
+    sgNNGRRT
+    sgNNGRRT_matches
+    sgNNGRRT_spacing
+    sgNNNRRT
+    sgNNNRRT_matches
+    sgNNNRRT_spacing
+    strand
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+mutation CreateRat(
+  $input: CreateRatInput!
+  $condition: ModelRatConditionInput
+) {
+  createRat(input: $input, condition: $condition) {
     aa_target
     chr
     codon
@@ -950,12 +945,12 @@ export const onCreateRat = /* GraphQL */ `subscription OnCreateRat {
     __typename
   }
 }
-` as GeneratedSubscription<
-  APITypes.OnCreateRatSubscriptionVariables,
-  APITypes.OnCreateRatSubscription
->;
-export const onUpdateRat = /* GraphQL */ `subscription OnUpdateRat {
-  onUpdateRat {
+
+mutation UpdateRat(
+  $input: UpdateRatInput!
+  $condition: ModelRatConditionInput
+) {
+  updateRat(input: $input, condition: $condition) {
     aa_target
     chr
     codon
@@ -993,12 +988,12 @@ export const onUpdateRat = /* GraphQL */ `subscription OnUpdateRat {
     __typename
   }
 }
-` as GeneratedSubscription<
-  APITypes.OnUpdateRatSubscriptionVariables,
-  APITypes.OnUpdateRatSubscription
->;
-export const onDeleteRat = /* GraphQL */ `subscription OnDeleteRat {
-  onDeleteRat {
+
+mutation DeleteRat(
+  $input: DeleteRatInput!
+  $condition: ModelRatConditionInput
+) {
+  deleteRat(input: $input, condition: $condition) {
     aa_target
     chr
     codon
@@ -1036,12 +1031,12 @@ export const onDeleteRat = /* GraphQL */ `subscription OnDeleteRat {
     __typename
   }
 }
-` as GeneratedSubscription<
-  APITypes.OnDeleteRatSubscriptionVariables,
-  APITypes.OnDeleteRatSubscription
->;
-export const onCreateAlias = /* GraphQL */ `subscription OnCreateAlias {
-  onCreateAlias {
+
+mutation CreateAlias(
+  $input: CreateAliasInput!
+  $condition: ModelAliasConditionInput
+) {
+  createAlias(input: $input, condition: $condition) {
     id
     alias
     gene
@@ -1051,12 +1046,12 @@ export const onCreateAlias = /* GraphQL */ `subscription OnCreateAlias {
     __typename
   }
 }
-` as GeneratedSubscription<
-  APITypes.OnCreateAliasSubscriptionVariables,
-  APITypes.OnCreateAliasSubscription
->;
-export const onUpdateAlias = /* GraphQL */ `subscription OnUpdateAlias {
-  onUpdateAlias {
+
+mutation UpdateAlias(
+  $input: UpdateAliasInput!
+  $condition: ModelAliasConditionInput
+) {
+  updateAlias(input: $input, condition: $condition) {
     id
     alias
     gene
@@ -1066,12 +1061,12 @@ export const onUpdateAlias = /* GraphQL */ `subscription OnUpdateAlias {
     __typename
   }
 }
-` as GeneratedSubscription<
-  APITypes.OnUpdateAliasSubscriptionVariables,
-  APITypes.OnUpdateAliasSubscription
->;
-export const onDeleteAlias = /* GraphQL */ `subscription OnDeleteAlias {
-  onDeleteAlias {
+
+mutation DeleteAlias(
+  $input: DeleteAliasInput!
+  $condition: ModelAliasConditionInput
+) {
+  deleteAlias(input: $input, condition: $condition) {
     id
     alias
     gene
@@ -1081,21 +1076,17 @@ export const onDeleteAlias = /* GraphQL */ `subscription OnDeleteAlias {
     __typename
   }
 }
-` as GeneratedSubscription<
-  APITypes.OnDeleteAliasSubscriptionVariables,
-  APITypes.OnDeleteAliasSubscription
->;
-export const onCreateGeneLollipopGraph = /* GraphQL */ `subscription OnCreateGeneLollipopGraph {
-  onCreateGeneLollipopGraph {
+
+mutation CreateGeneLollipopGraph(
+  $input: CreateGeneLollipopGraphInput!
+  $condition: ModelGeneLollipopGraphConditionInput
+) {
+  createGeneLollipopGraph(input: $input, condition: $condition) {
     id
     transcriptId
     transcriptId2
     numberOfAAS
     lollipopLocations {
-      nextToken
-      __typename
-    }
-    lollipopLocationsMCF7 {
       nextToken
       __typename
     }
@@ -1103,6 +1094,10 @@ export const onCreateGeneLollipopGraph = /* GraphQL */ `subscription OnCreateGen
       nextToken
       __typename
     }
+    lollipopLocationsMCF7 {
+      nextToken
+      __typename
+    }
     domains {
       nextToken
       __typename
@@ -1112,21 +1107,17 @@ export const onCreateGeneLollipopGraph = /* GraphQL */ `subscription OnCreateGen
     __typename
   }
 }
-` as GeneratedSubscription<
-  APITypes.OnCreateGeneLollipopGraphSubscriptionVariables,
-  APITypes.OnCreateGeneLollipopGraphSubscription
->;
-export const onUpdateGeneLollipopGraph = /* GraphQL */ `subscription OnUpdateGeneLollipopGraph {
-  onUpdateGeneLollipopGraph {
+
+mutation UpdateGeneLollipopGraph(
+  $input: UpdateGeneLollipopGraphInput!
+  $condition: ModelGeneLollipopGraphConditionInput
+) {
+  updateGeneLollipopGraph(input: $input, condition: $condition) {
     id
     transcriptId
     transcriptId2
     numberOfAAS
     lollipopLocations {
-      nextToken
-      __typename
-    }
-    lollipopLocationsMCF7 {
       nextToken
       __typename
     }
@@ -1134,6 +1125,10 @@ export const onUpdateGeneLollipopGraph = /* GraphQL */ `subscription OnUpdateGen
       nextToken
       __typename
     }
+    lollipopLocationsMCF7 {
+      nextToken
+      __typename
+    }
     domains {
       nextToken
       __typename
@@ -1143,21 +1138,17 @@ export const onUpdateGeneLollipopGraph = /* GraphQL */ `subscription OnUpdateGen
     __typename
   }
 }
-` as GeneratedSubscription<
-  APITypes.OnUpdateGeneLollipopGraphSubscriptionVariables,
-  APITypes.OnUpdateGeneLollipopGraphSubscription
->;
-export const onDeleteGeneLollipopGraph = /* GraphQL */ `subscription OnDeleteGeneLollipopGraph {
-  onDeleteGeneLollipopGraph {
+
+mutation DeleteGeneLollipopGraph(
+  $input: DeleteGeneLollipopGraphInput!
+  $condition: ModelGeneLollipopGraphConditionInput
+) {
+  deleteGeneLollipopGraph(input: $input, condition: $condition) {
     id
     transcriptId
     transcriptId2
     numberOfAAS
     lollipopLocations {
-      nextToken
-      __typename
-    }
-    lollipopLocationsMCF7 {
       nextToken
       __typename
     }
@@ -1165,6 +1156,10 @@ export const onDeleteGeneLollipopGraph = /* GraphQL */ `subscription OnDeleteGen
       nextToken
       __typename
     }
+    lollipopLocationsMCF7 {
+      nextToken
+      __typename
+    }
     domains {
       nextToken
       __typename
@@ -1174,12 +1169,12 @@ export const onDeleteGeneLollipopGraph = /* GraphQL */ `subscription OnDeleteGen
     __typename
   }
 }
-` as GeneratedSubscription<
-  APITypes.OnDeleteGeneLollipopGraphSubscriptionVariables,
-  APITypes.OnDeleteGeneLollipopGraphSubscription
->;
-export const onCreateLollipopLocations = /* GraphQL */ `subscription OnCreateLollipopLocations {
-  onCreateLollipopLocations {
+
+mutation CreateLollipopLocations(
+  $input: CreateLollipopLocationsInput!
+  $condition: ModelLollipopLocationsConditionInput
+) {
+  createLollipopLocations(input: $input, condition: $condition) {
     id
     gene
     sgRNASequence
@@ -1212,12 +1207,12 @@ export const onCreateLollipopLocations = /* GraphQL */ `subscription OnCreateLol
     __typename
   }
 }
-` as GeneratedSubscription<
-  APITypes.OnCreateLollipopLocationsSubscriptionVariables,
-  APITypes.OnCreateLollipopLocationsSubscription
->;
-export const onUpdateLollipopLocations = /* GraphQL */ `subscription OnUpdateLollipopLocations {
-  onUpdateLollipopLocations {
+
+mutation UpdateLollipopLocations(
+  $input: UpdateLollipopLocationsInput!
+  $condition: ModelLollipopLocationsConditionInput
+) {
+  updateLollipopLocations(input: $input, condition: $condition) {
     id
     gene
     sgRNASequence
@@ -1250,12 +1245,12 @@ export const onUpdateLollipopLocations = /* GraphQL */ `subscription OnUpdateLol
     __typename
   }
 }
-` as GeneratedSubscription<
-  APITypes.OnUpdateLollipopLocationsSubscriptionVariables,
-  APITypes.OnUpdateLollipopLocationsSubscription
->;
-export const onDeleteLollipopLocations = /* GraphQL */ `subscription OnDeleteLollipopLocations {
-  onDeleteLollipopLocations {
+
+mutation DeleteLollipopLocations(
+  $input: DeleteLollipopLocationsInput!
+  $condition: ModelLollipopLocationsConditionInput
+) {
+  deleteLollipopLocations(input: $input, condition: $condition) {
     id
     gene
     sgRNASequence
@@ -1288,156 +1283,88 @@ export const onDeleteLollipopLocations = /* GraphQL */ `subscription OnDeleteLol
     __typename
   }
 }
-` as GeneratedSubscription<
-  APITypes.OnDeleteLollipopLocationsSubscriptionVariables,
-  APITypes.OnDeleteLollipopLocationsSubscription
->;
-export const onCreateLollipopLocationsMCF7 = /* GraphQL */ `subscription OnCreateLollipopLocationsMCF7 {
-  onCreateLollipopLocationsMCF7 {
-    id
-    gene
-    sgRNASequence
-    function
-    aapos
-    aachg
-    clinVar
-    clinVar_ID
-    lfcUNT
-    pvalueUNT
-    fdrUNT
-    lfcCISP
-    pvalueCISP
-    fdrCISP
-    lfcOLAP
-    pvalueOLAP
-    fdrOLAP
-    lfcDOX
-    pvalueDOX
-    fdrDOX
-    lfcCPT
-    pvalueCPT
-    fdrCPT
-    tCGA
-    pTMsiteLoc
-    noncanonicalTranscript
-    cellLine
-    createdAt
-    updatedAt
-    __typename
-  }
-}
-` as GeneratedSubscription<
-  APITypes.OnCreateLollipopLocationsMCF7SubscriptionVariables,
-  APITypes.OnCreateLollipopLocationsMCF7Subscription
->;
-export const onUpdateLollipopLocationsMCF7 = /* GraphQL */ `subscription OnUpdateLollipopLocationsMCF7 {
-  onUpdateLollipopLocationsMCF7 {
-    id
-    gene
-    sgRNASequence
-    function
-    aapos
-    aachg
-    clinVar
-    clinVar_ID
-    lfcUNT
-    pvalueUNT
-    fdrUNT
-    lfcCISP
-    pvalueCISP
-    fdrCISP
-    lfcOLAP
-    pvalueOLAP
-    fdrOLAP
-    lfcDOX
-    pvalueDOX
-    fdrDOX
-    lfcCPT
-    pvalueCPT
-    fdrCPT
-    tCGA
-    pTMsiteLoc
-    noncanonicalTranscript
-    cellLine
-    createdAt
-    updatedAt
-    __typename
-  }
-}
-` as GeneratedSubscription<
-  APITypes.OnUpdateLollipopLocationsMCF7SubscriptionVariables,
-  APITypes.OnUpdateLollipopLocationsMCF7Subscription
->;
-export const onDeleteLollipopLocationsMCF7 = /* GraphQL */ `subscription OnDeleteLollipopLocationsMCF7 {
-  onDeleteLollipopLocationsMCF7 {
-    id
-    gene
-    sgRNASequence
-    function
-    aapos
-    aachg
-    clinVar
-    clinVar_ID
-    lfcUNT
-    pvalueUNT
-    fdrUNT
-    lfcCISP
-    pvalueCISP
-    fdrCISP
-    lfcOLAP
-    pvalueOLAP
-    fdrOLAP
-    lfcDOX
-    pvalueDOX
-    fdrDOX
-    lfcCPT
-    pvalueCPT
-    fdrCPT
-    tCGA
-    pTMsiteLoc
-    noncanonicalTranscript
-    cellLine
-    createdAt
-    updatedAt
-    __typename
-  }
-}
-` as GeneratedSubscription<
-  APITypes.OnDeleteLollipopLocationsMCF7SubscriptionVariables,
-  APITypes.OnDeleteLollipopLocationsMCF7Subscription
->;
-export const onCreateLollipopLocationsMDAMB231 = /* GraphQL */ `subscription OnCreateLollipopLocationsMDAMB231 {
-  onCreateLollipopLocationsMDAMB231 {
-    id
+
+mutation CreateLollipopLocationsMDAMB231(
+  $input: CreateLollipopLocationsMDAMB231Input!
+  $condition: ModelLollipopLocationsMDAMB231ConditionInput
+) {
+  createLollipopLocationsMDAMB231(input: $input, condition: $condition) {
     sgRNA_ID
     gene
-    sgRNASequence
-    function
-    aapos
-    aachg
-    clinVar
-    clinVar_ID
     lfcUNT
     pvalueUNT
     fdrUNT
+    sgRNASequence
+    function
+    clinVar
+    clinVar_ID
+    aapos
     nlfcUNT
     tCGA
     pTMsiteLoc
     noncanonicalTranscript
-    cellLine
     createdAt
     updatedAt
     __typename
   }
 }
-` as GeneratedSubscription<
-  APITypes.OnCreateLollipopLocationsMDAMB231SubscriptionVariables,
-  APITypes.OnCreateLollipopLocationsMDAMB231Subscription
->;
-export const onUpdateLollipopLocationsMDAMB231 = /* GraphQL */ `subscription OnUpdateLollipopLocationsMDAMB231 {
-  onUpdateLollipopLocationsMDAMB231 {
-    id
+
+mutation UpdateLollipopLocationsMDAMB231(
+  $input: UpdateLollipopLocationsMDAMB231Input!
+  $condition: ModelLollipopLocationsMDAMB231ConditionInput
+) {
+  updateLollipopLocationsMDAMB231(input: $input, condition: $condition) {
     sgRNA_ID
+    gene
+    lfcUNT
+    pvalueUNT
+    fdrUNT
+    sgRNASequence
+    function
+    clinVar
+    clinVar_ID
+    aapos
+    nlfcUNT
+    tCGA
+    pTMsiteLoc
+    noncanonicalTranscript
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+mutation DeleteLollipopLocationsMDAMB231(
+  $input: DeleteLollipopLocationsMDAMB231Input!
+  $condition: ModelLollipopLocationsMDAMB231ConditionInput
+) {
+  deleteLollipopLocationsMDAMB231(input: $input, condition: $condition) {
+    sgRNA_ID
+    gene
+    lfcUNT
+    pvalueUNT
+    fdrUNT
+    sgRNASequence
+    function
+    clinVar
+    clinVar_ID
+    aapos
+    nlfcUNT
+    tCGA
+    pTMsiteLoc
+    noncanonicalTranscript
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+mutation CreateLollipopLocationsMCF7(
+  $input: CreateLollipopLocationsMCF7Input!
+  $condition: ModelLollipopLocationsMCF7ConditionInput
+) {
+  createLollipopLocationsMCF7(input: $input, condition: $condition) {
+    id
     gene
     sgRNASequence
     function
@@ -1448,7 +1375,18 @@ export const onUpdateLollipopLocationsMDAMB231 = /* GraphQL */ `subscription OnU
     lfcUNT
     pvalueUNT
     fdrUNT
-    nlfcUNT
+    lfcCISP
+    pvalueCISP
+    fdrCISP
+    lfcOLAP
+    pvalueOLAP
+    fdrOLAP
+    lfcDOX
+    pvalueDOX
+    fdrDOX
+    lfcCPT
+    pvalueCPT
+    fdrCPT
     tCGA
     pTMsiteLoc
     noncanonicalTranscript
@@ -1458,14 +1396,13 @@ export const onUpdateLollipopLocationsMDAMB231 = /* GraphQL */ `subscription OnU
     __typename
   }
 }
-` as GeneratedSubscription<
-  APITypes.OnUpdateLollipopLocationsMDAMB231SubscriptionVariables,
-  APITypes.OnUpdateLollipopLocationsMDAMB231Subscription
->;
-export const onDeleteLollipopLocationsMDAMB231 = /* GraphQL */ `subscription OnDeleteLollipopLocationsMDAMB231 {
-  onDeleteLollipopLocationsMDAMB231 {
+
+mutation UpdateLollipopLocationsMCF7(
+  $input: UpdateLollipopLocationsMCF7Input!
+  $condition: ModelLollipopLocationsMCF7ConditionInput
+) {
+  updateLollipopLocationsMCF7(input: $input, condition: $condition) {
     id
-    sgRNA_ID
     gene
     sgRNASequence
     function
@@ -1476,7 +1413,18 @@ export const onDeleteLollipopLocationsMDAMB231 = /* GraphQL */ `subscription OnD
     lfcUNT
     pvalueUNT
     fdrUNT
-    nlfcUNT
+    lfcCISP
+    pvalueCISP
+    fdrCISP
+    lfcOLAP
+    pvalueOLAP
+    fdrOLAP
+    lfcDOX
+    pvalueDOX
+    fdrDOX
+    lfcCPT
+    pvalueCPT
+    fdrCPT
     tCGA
     pTMsiteLoc
     noncanonicalTranscript
@@ -1486,12 +1434,50 @@ export const onDeleteLollipopLocationsMDAMB231 = /* GraphQL */ `subscription OnD
     __typename
   }
 }
-` as GeneratedSubscription<
-  APITypes.OnDeleteLollipopLocationsMDAMB231SubscriptionVariables,
-  APITypes.OnDeleteLollipopLocationsMDAMB231Subscription
->;
-export const onCreateGeneLollipopGraphMCF7 = /* GraphQL */ `subscription OnCreateGeneLollipopGraphMCF7 {
-  onCreateGeneLollipopGraphMCF7 {
+
+mutation DeleteLollipopLocationsMCF7(
+  $input: DeleteLollipopLocationsMCF7Input!
+  $condition: ModelLollipopLocationsMCF7ConditionInput
+) {
+  deleteLollipopLocationsMCF7(input: $input, condition: $condition) {
+    id
+    gene
+    sgRNASequence
+    function
+    aapos
+    aachg
+    clinVar
+    clinVar_ID
+    lfcUNT
+    pvalueUNT
+    fdrUNT
+    lfcCISP
+    pvalueCISP
+    fdrCISP
+    lfcOLAP
+    pvalueOLAP
+    fdrOLAP
+    lfcDOX
+    pvalueDOX
+    fdrDOX
+    lfcCPT
+    pvalueCPT
+    fdrCPT
+    tCGA
+    pTMsiteLoc
+    noncanonicalTranscript
+    cellLine
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+mutation CreateGeneLollipopGraphMCF7(
+  $input: CreateGeneLollipopGraphMCF7Input!
+  $condition: ModelGeneLollipopGraphMCF7ConditionInput
+) {
+  createGeneLollipopGraphMCF7(input: $input, condition: $condition) {
     id
     transcriptId
     transcriptId2
@@ -1509,12 +1495,12 @@ export const onCreateGeneLollipopGraphMCF7 = /* GraphQL */ `subscription OnCreat
     __typename
   }
 }
-` as GeneratedSubscription<
-  APITypes.OnCreateGeneLollipopGraphMCF7SubscriptionVariables,
-  APITypes.OnCreateGeneLollipopGraphMCF7Subscription
->;
-export const onUpdateGeneLollipopGraphMCF7 = /* GraphQL */ `subscription OnUpdateGeneLollipopGraphMCF7 {
-  onUpdateGeneLollipopGraphMCF7 {
+
+mutation UpdateGeneLollipopGraphMCF7(
+  $input: UpdateGeneLollipopGraphMCF7Input!
+  $condition: ModelGeneLollipopGraphMCF7ConditionInput
+) {
+  updateGeneLollipopGraphMCF7(input: $input, condition: $condition) {
     id
     transcriptId
     transcriptId2
@@ -1532,12 +1518,12 @@ export const onUpdateGeneLollipopGraphMCF7 = /* GraphQL */ `subscription OnUpdat
     __typename
   }
 }
-` as GeneratedSubscription<
-  APITypes.OnUpdateGeneLollipopGraphMCF7SubscriptionVariables,
-  APITypes.OnUpdateGeneLollipopGraphMCF7Subscription
->;
-export const onDeleteGeneLollipopGraphMCF7 = /* GraphQL */ `subscription OnDeleteGeneLollipopGraphMCF7 {
-  onDeleteGeneLollipopGraphMCF7 {
+
+mutation DeleteGeneLollipopGraphMCF7(
+  $input: DeleteGeneLollipopGraphMCF7Input!
+  $condition: ModelGeneLollipopGraphMCF7ConditionInput
+) {
+  deleteGeneLollipopGraphMCF7(input: $input, condition: $condition) {
     id
     transcriptId
     transcriptId2
@@ -1555,12 +1541,12 @@ export const onDeleteGeneLollipopGraphMCF7 = /* GraphQL */ `subscription OnDelet
     __typename
   }
 }
-` as GeneratedSubscription<
-  APITypes.OnDeleteGeneLollipopGraphMCF7SubscriptionVariables,
-  APITypes.OnDeleteGeneLollipopGraphMCF7Subscription
->;
-export const onCreateDomain = /* GraphQL */ `subscription OnCreateDomain {
-  onCreateDomain {
+
+mutation CreateDomain(
+  $input: CreateDomainInput!
+  $condition: ModelDomainConditionInput
+) {
+  createDomain(input: $input, condition: $condition) {
     id
     accessionNumber
     type
@@ -1574,12 +1560,12 @@ export const onCreateDomain = /* GraphQL */ `subscription OnCreateDomain {
     __typename
   }
 }
-` as GeneratedSubscription<
-  APITypes.OnCreateDomainSubscriptionVariables,
-  APITypes.OnCreateDomainSubscription
->;
-export const onUpdateDomain = /* GraphQL */ `subscription OnUpdateDomain {
-  onUpdateDomain {
+
+mutation UpdateDomain(
+  $input: UpdateDomainInput!
+  $condition: ModelDomainConditionInput
+) {
+  updateDomain(input: $input, condition: $condition) {
     id
     accessionNumber
     type
@@ -1593,12 +1579,12 @@ export const onUpdateDomain = /* GraphQL */ `subscription OnUpdateDomain {
     __typename
   }
 }
-` as GeneratedSubscription<
-  APITypes.OnUpdateDomainSubscriptionVariables,
-  APITypes.OnUpdateDomainSubscription
->;
-export const onDeleteDomain = /* GraphQL */ `subscription OnDeleteDomain {
-  onDeleteDomain {
+
+mutation DeleteDomain(
+  $input: DeleteDomainInput!
+  $condition: ModelDomainConditionInput
+) {
+  deleteDomain(input: $input, condition: $condition) {
     id
     accessionNumber
     type
@@ -1612,43 +1598,39 @@ export const onDeleteDomain = /* GraphQL */ `subscription OnDeleteDomain {
     __typename
   }
 }
-` as GeneratedSubscription<
-  APITypes.OnDeleteDomainSubscriptionVariables,
-  APITypes.OnDeleteDomainSubscription
->;
-export const onCreateAuth = /* GraphQL */ `subscription OnCreateAuth {
-  onCreateAuth {
+
+mutation CreateAuth(
+  $input: CreateAuthInput!
+  $condition: ModelAuthConditionInput
+) {
+  createAuth(input: $input, condition: $condition) {
     id
     createdAt
     updatedAt
     __typename
   }
 }
-` as GeneratedSubscription<
-  APITypes.OnCreateAuthSubscriptionVariables,
-  APITypes.OnCreateAuthSubscription
->;
-export const onUpdateAuth = /* GraphQL */ `subscription OnUpdateAuth {
-  onUpdateAuth {
+
+mutation UpdateAuth(
+  $input: UpdateAuthInput!
+  $condition: ModelAuthConditionInput
+) {
+  updateAuth(input: $input, condition: $condition) {
     id
     createdAt
     updatedAt
     __typename
   }
 }
-` as GeneratedSubscription<
-  APITypes.OnUpdateAuthSubscriptionVariables,
-  APITypes.OnUpdateAuthSubscription
->;
-export const onDeleteAuth = /* GraphQL */ `subscription OnDeleteAuth {
-  onDeleteAuth {
+
+mutation DeleteAuth(
+  $input: DeleteAuthInput!
+  $condition: ModelAuthConditionInput
+) {
+  deleteAuth(input: $input, condition: $condition) {
     id
     createdAt
     updatedAt
     __typename
   }
 }
-` as GeneratedSubscription<
-  APITypes.OnDeleteAuthSubscriptionVariables,
-  APITypes.OnDeleteAuthSubscription
->;

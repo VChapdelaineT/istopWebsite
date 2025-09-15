@@ -1179,6 +1179,14 @@ export const createGeneLollipopGraph = /* GraphQL */ `mutation CreateGeneLollipo
       nextToken
       __typename
     }
+    lollipopLocationsMCF7 {
+      nextToken
+      __typename
+    }
+    lollipopLocationsMDAMB231 {
+      nextToken
+      __typename
+    }
     domains {
       nextToken
       __typename
@@ -1205,6 +1213,14 @@ export const updateGeneLollipopGraph = /* GraphQL */ `mutation UpdateGeneLollipo
       nextToken
       __typename
     }
+    lollipopLocationsMCF7 {
+      nextToken
+      __typename
+    }
+    lollipopLocationsMDAMB231 {
+      nextToken
+      __typename
+    }
     domains {
       nextToken
       __typename
@@ -1228,6 +1244,14 @@ export const deleteGeneLollipopGraph = /* GraphQL */ `mutation DeleteGeneLollipo
     transcriptId2
     numberOfAAS
     lollipopLocations {
+      nextToken
+      __typename
+    }
+    lollipopLocationsMCF7 {
+      nextToken
+      __typename
+    }
+    lollipopLocationsMDAMB231 {
       nextToken
       __typename
     }
@@ -1490,6 +1514,99 @@ export const deleteLollipopLocationsMCF7 = /* GraphQL */ `mutation DeleteLollipo
   APITypes.DeleteLollipopLocationsMCF7MutationVariables,
   APITypes.DeleteLollipopLocationsMCF7Mutation
 >;
+export const createLollipopLocationsMDAMB231 = /* GraphQL */ `mutation CreateLollipopLocationsMDAMB231(
+  $input: CreateLollipopLocationsMDAMB231Input!
+  $condition: ModelLollipopLocationsMDAMB231ConditionInput
+) {
+  createLollipopLocationsMDAMB231(input: $input, condition: $condition) {
+    id
+    sgRNA_ID
+    gene
+    sgRNASequence
+    function
+    aapos
+    aachg
+    clinVar
+    clinVar_ID
+    lfcUNT
+    pvalueUNT
+    fdrUNT
+    nlfcUNT
+    tCGA
+    pTMsiteLoc
+    noncanonicalTranscript
+    cellLine
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+` as GeneratedMutation<
+  APITypes.CreateLollipopLocationsMDAMB231MutationVariables,
+  APITypes.CreateLollipopLocationsMDAMB231Mutation
+>;
+export const updateLollipopLocationsMDAMB231 = /* GraphQL */ `mutation UpdateLollipopLocationsMDAMB231(
+  $input: UpdateLollipopLocationsMDAMB231Input!
+  $condition: ModelLollipopLocationsMDAMB231ConditionInput
+) {
+  updateLollipopLocationsMDAMB231(input: $input, condition: $condition) {
+    id
+    sgRNA_ID
+    gene
+    sgRNASequence
+    function
+    aapos
+    aachg
+    clinVar
+    clinVar_ID
+    lfcUNT
+    pvalueUNT
+    fdrUNT
+    nlfcUNT
+    tCGA
+    pTMsiteLoc
+    noncanonicalTranscript
+    cellLine
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+` as GeneratedMutation<
+  APITypes.UpdateLollipopLocationsMDAMB231MutationVariables,
+  APITypes.UpdateLollipopLocationsMDAMB231Mutation
+>;
+export const deleteLollipopLocationsMDAMB231 = /* GraphQL */ `mutation DeleteLollipopLocationsMDAMB231(
+  $input: DeleteLollipopLocationsMDAMB231Input!
+  $condition: ModelLollipopLocationsMDAMB231ConditionInput
+) {
+  deleteLollipopLocationsMDAMB231(input: $input, condition: $condition) {
+    id
+    sgRNA_ID
+    gene
+    sgRNASequence
+    function
+    aapos
+    aachg
+    clinVar
+    clinVar_ID
+    lfcUNT
+    pvalueUNT
+    fdrUNT
+    nlfcUNT
+    tCGA
+    pTMsiteLoc
+    noncanonicalTranscript
+    cellLine
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+` as GeneratedMutation<
+  APITypes.DeleteLollipopLocationsMDAMB231MutationVariables,
+  APITypes.DeleteLollipopLocationsMDAMB231Mutation
+>;
 export const createGeneLollipopGraphMCF7 = /* GraphQL */ `mutation CreateGeneLollipopGraphMCF7(
   $input: CreateGeneLollipopGraphMCF7Input!
   $condition: ModelGeneLollipopGraphMCF7ConditionInput
@@ -1678,67 +1795,4 @@ export const deleteAuth = /* GraphQL */ `mutation DeleteAuth(
 ` as GeneratedMutation<
   APITypes.DeleteAuthMutationVariables,
   APITypes.DeleteAuthMutation
->;
-export const createLollipopLocationsMDAMB231 = /* GraphQL */ `mutation CreateLollipopLocationsMDAMB231(
-  $input: CreateLollipopLocationsMDAMB231Input!
-) {
-  createLollipopLocationsMDAMB231(input: $input) {
-    id
-    gene
-    lfcUNT
-    pvalueUNT
-    fdrUNT
-    sgRNASequence
-    function
-    clinVar
-    aapos
-    nLFC
-    __typename
-  }
-}
-` as GeneratedMutation<
-  APITypes.CreateLollipopLocationsMDAMB231MutationVariables,
-  APITypes.CreateLollipopLocationsMDAMB231Mutation
->;
-export const updateLollipopLocationsMDAMB231 = /* GraphQL */ `mutation UpdateLollipopLocationsMDAMB231(
-  $input: UpdateLollipopLocationsMDAMB231Input!
-) {
-  updateLollipopLocationsMDAMB231(input: $input) {
-    id
-    gene
-    lfcUNT
-    pvalueUNT
-    fdrUNT
-    sgRNASequence
-    function
-    clinVar
-    aapos
-    nLFC
-    __typename
-  }
-}
-` as GeneratedMutation<
-  APITypes.UpdateLollipopLocationsMDAMB231MutationVariables,
-  APITypes.UpdateLollipopLocationsMDAMB231Mutation
->;
-export const deleteLollipopLocationsMDAMB231 = /* GraphQL */ `mutation DeleteLollipopLocationsMDAMB231(
-  $input: DeleteLollipopLocationsMDAMB231Input!
-) {
-  deleteLollipopLocationsMDAMB231(input: $input) {
-    id
-    gene
-    lfcUNT
-    pvalueUNT
-    fdrUNT
-    sgRNASequence
-    function
-    clinVar
-    aapos
-    nLFC
-    __typename
-  }
-}
-` as GeneratedMutation<
-  APITypes.DeleteLollipopLocationsMDAMB231MutationVariables,
-  APITypes.DeleteLollipopLocationsMDAMB231Mutation
 >;

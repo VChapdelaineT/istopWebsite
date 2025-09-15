@@ -1,14 +1,6 @@
-/* tslint:disable */
-/* eslint-disable */
-// this is an auto generated file. This will be overwritten
+# this is an auto generated file. This will be overwritten
 
-import * as APITypes from "../API";
-type GeneratedSubscription<InputType, OutputType> = string & {
-  __generatedSubscriptionInput: InputType;
-  __generatedSubscriptionOutput: OutputType;
-};
-
-export const onCreateHomoSapiens = /* GraphQL */ `subscription OnCreateHomoSapiens {
+subscription OnCreateHomoSapiens {
   onCreateHomoSapiens {
     aa_target
     chr
@@ -48,11 +40,8 @@ export const onCreateHomoSapiens = /* GraphQL */ `subscription OnCreateHomoSapie
     __typename
   }
 }
-` as GeneratedSubscription<
-  APITypes.OnCreateHomoSapiensSubscriptionVariables,
-  APITypes.OnCreateHomoSapiensSubscription
->;
-export const onUpdateHomoSapiens = /* GraphQL */ `subscription OnUpdateHomoSapiens {
+
+subscription OnUpdateHomoSapiens {
   onUpdateHomoSapiens {
     aa_target
     chr
@@ -92,11 +81,8 @@ export const onUpdateHomoSapiens = /* GraphQL */ `subscription OnUpdateHomoSapie
     __typename
   }
 }
-` as GeneratedSubscription<
-  APITypes.OnUpdateHomoSapiensSubscriptionVariables,
-  APITypes.OnUpdateHomoSapiensSubscription
->;
-export const onDeleteHomoSapiens = /* GraphQL */ `subscription OnDeleteHomoSapiens {
+
+subscription OnDeleteHomoSapiens {
   onDeleteHomoSapiens {
     aa_target
     chr
@@ -136,11 +122,8 @@ export const onDeleteHomoSapiens = /* GraphQL */ `subscription OnDeleteHomoSapie
     __typename
   }
 }
-` as GeneratedSubscription<
-  APITypes.OnDeleteHomoSapiensSubscriptionVariables,
-  APITypes.OnDeleteHomoSapiensSubscription
->;
-export const onCreateYeast = /* GraphQL */ `subscription OnCreateYeast {
+
+subscription OnCreateYeast {
   onCreateYeast {
     aa_target
     chr
@@ -179,11 +162,8 @@ export const onCreateYeast = /* GraphQL */ `subscription OnCreateYeast {
     __typename
   }
 }
-` as GeneratedSubscription<
-  APITypes.OnCreateYeastSubscriptionVariables,
-  APITypes.OnCreateYeastSubscription
->;
-export const onUpdateYeast = /* GraphQL */ `subscription OnUpdateYeast {
+
+subscription OnUpdateYeast {
   onUpdateYeast {
     aa_target
     chr
@@ -222,11 +202,8 @@ export const onUpdateYeast = /* GraphQL */ `subscription OnUpdateYeast {
     __typename
   }
 }
-` as GeneratedSubscription<
-  APITypes.OnUpdateYeastSubscriptionVariables,
-  APITypes.OnUpdateYeastSubscription
->;
-export const onDeleteYeast = /* GraphQL */ `subscription OnDeleteYeast {
+
+subscription OnDeleteYeast {
   onDeleteYeast {
     aa_target
     chr
@@ -265,11 +242,8 @@ export const onDeleteYeast = /* GraphQL */ `subscription OnDeleteYeast {
     __typename
   }
 }
-` as GeneratedSubscription<
-  APITypes.OnDeleteYeastSubscriptionVariables,
-  APITypes.OnDeleteYeastSubscription
->;
-export const onCreateFish = /* GraphQL */ `subscription OnCreateFish {
+
+subscription OnCreateFish {
   onCreateFish {
     aa_target
     chr
@@ -308,11 +282,8 @@ export const onCreateFish = /* GraphQL */ `subscription OnCreateFish {
     __typename
   }
 }
-` as GeneratedSubscription<
-  APITypes.OnCreateFishSubscriptionVariables,
-  APITypes.OnCreateFishSubscription
->;
-export const onUpdateFish = /* GraphQL */ `subscription OnUpdateFish {
+
+subscription OnUpdateFish {
   onUpdateFish {
     aa_target
     chr
@@ -351,11 +322,8 @@ export const onUpdateFish = /* GraphQL */ `subscription OnUpdateFish {
     __typename
   }
 }
-` as GeneratedSubscription<
-  APITypes.OnUpdateFishSubscriptionVariables,
-  APITypes.OnUpdateFishSubscription
->;
-export const onDeleteFish = /* GraphQL */ `subscription OnDeleteFish {
+
+subscription OnDeleteFish {
   onDeleteFish {
     aa_target
     chr
@@ -394,11 +362,8 @@ export const onDeleteFish = /* GraphQL */ `subscription OnDeleteFish {
     __typename
   }
 }
-` as GeneratedSubscription<
-  APITypes.OnDeleteFishSubscriptionVariables,
-  APITypes.OnDeleteFishSubscription
->;
-export const onCreateMouse = /* GraphQL */ `subscription OnCreateMouse {
+
+subscription OnCreateMouse {
   onCreateMouse {
     aa_target
     chr
@@ -437,11 +402,8 @@ export const onCreateMouse = /* GraphQL */ `subscription OnCreateMouse {
     __typename
   }
 }
-` as GeneratedSubscription<
-  APITypes.OnCreateMouseSubscriptionVariables,
-  APITypes.OnCreateMouseSubscription
->;
-export const onUpdateMouse = /* GraphQL */ `subscription OnUpdateMouse {
+
+subscription OnUpdateMouse {
   onUpdateMouse {
     aa_target
     chr
@@ -480,11 +442,8 @@ export const onUpdateMouse = /* GraphQL */ `subscription OnUpdateMouse {
     __typename
   }
 }
-` as GeneratedSubscription<
-  APITypes.OnUpdateMouseSubscriptionVariables,
-  APITypes.OnUpdateMouseSubscription
->;
-export const onDeleteMouse = /* GraphQL */ `subscription OnDeleteMouse {
+
+subscription OnDeleteMouse {
   onDeleteMouse {
     aa_target
     chr
@@ -523,11 +482,8 @@ export const onDeleteMouse = /* GraphQL */ `subscription OnDeleteMouse {
     __typename
   }
 }
-` as GeneratedSubscription<
-  APITypes.OnDeleteMouseSubscriptionVariables,
-  APITypes.OnDeleteMouseSubscription
->;
-export const onCreateFly = /* GraphQL */ `subscription OnCreateFly {
+
+subscription OnCreateFly {
   onCreateFly {
     aa_target
     chr
@@ -566,11 +522,8 @@ export const onCreateFly = /* GraphQL */ `subscription OnCreateFly {
     __typename
   }
 }
-` as GeneratedSubscription<
-  APITypes.OnCreateFlySubscriptionVariables,
-  APITypes.OnCreateFlySubscription
->;
-export const onUpdateFly = /* GraphQL */ `subscription OnUpdateFly {
+
+subscription OnUpdateFly {
   onUpdateFly {
     aa_target
     chr
@@ -609,11 +562,8 @@ export const onUpdateFly = /* GraphQL */ `subscription OnUpdateFly {
     __typename
   }
 }
-` as GeneratedSubscription<
-  APITypes.OnUpdateFlySubscriptionVariables,
-  APITypes.OnUpdateFlySubscription
->;
-export const onDeleteFly = /* GraphQL */ `subscription OnDeleteFly {
+
+subscription OnDeleteFly {
   onDeleteFly {
     aa_target
     chr
@@ -652,11 +602,8 @@ export const onDeleteFly = /* GraphQL */ `subscription OnDeleteFly {
     __typename
   }
 }
-` as GeneratedSubscription<
-  APITypes.OnDeleteFlySubscriptionVariables,
-  APITypes.OnDeleteFlySubscription
->;
-export const onCreateNematode = /* GraphQL */ `subscription OnCreateNematode {
+
+subscription OnCreateNematode {
   onCreateNematode {
     aa_target
     chr
@@ -694,11 +641,8 @@ export const onCreateNematode = /* GraphQL */ `subscription OnCreateNematode {
     __typename
   }
 }
-` as GeneratedSubscription<
-  APITypes.OnCreateNematodeSubscriptionVariables,
-  APITypes.OnCreateNematodeSubscription
->;
-export const onUpdateNematode = /* GraphQL */ `subscription OnUpdateNematode {
+
+subscription OnUpdateNematode {
   onUpdateNematode {
     aa_target
     chr
@@ -736,11 +680,8 @@ export const onUpdateNematode = /* GraphQL */ `subscription OnUpdateNematode {
     __typename
   }
 }
-` as GeneratedSubscription<
-  APITypes.OnUpdateNematodeSubscriptionVariables,
-  APITypes.OnUpdateNematodeSubscription
->;
-export const onDeleteNematode = /* GraphQL */ `subscription OnDeleteNematode {
+
+subscription OnDeleteNematode {
   onDeleteNematode {
     aa_target
     chr
@@ -778,11 +719,8 @@ export const onDeleteNematode = /* GraphQL */ `subscription OnDeleteNematode {
     __typename
   }
 }
-` as GeneratedSubscription<
-  APITypes.OnDeleteNematodeSubscriptionVariables,
-  APITypes.OnDeleteNematodeSubscription
->;
-export const onCreatePlant = /* GraphQL */ `subscription OnCreatePlant {
+
+subscription OnCreatePlant {
   onCreatePlant {
     aa_target
     chr
@@ -821,11 +759,8 @@ export const onCreatePlant = /* GraphQL */ `subscription OnCreatePlant {
     __typename
   }
 }
-` as GeneratedSubscription<
-  APITypes.OnCreatePlantSubscriptionVariables,
-  APITypes.OnCreatePlantSubscription
->;
-export const onUpdatePlant = /* GraphQL */ `subscription OnUpdatePlant {
+
+subscription OnUpdatePlant {
   onUpdatePlant {
     aa_target
     chr
@@ -864,11 +799,8 @@ export const onUpdatePlant = /* GraphQL */ `subscription OnUpdatePlant {
     __typename
   }
 }
-` as GeneratedSubscription<
-  APITypes.OnUpdatePlantSubscriptionVariables,
-  APITypes.OnUpdatePlantSubscription
->;
-export const onDeletePlant = /* GraphQL */ `subscription OnDeletePlant {
+
+subscription OnDeletePlant {
   onDeletePlant {
     aa_target
     chr
@@ -907,11 +839,8 @@ export const onDeletePlant = /* GraphQL */ `subscription OnDeletePlant {
     __typename
   }
 }
-` as GeneratedSubscription<
-  APITypes.OnDeletePlantSubscriptionVariables,
-  APITypes.OnDeletePlantSubscription
->;
-export const onCreateRat = /* GraphQL */ `subscription OnCreateRat {
+
+subscription OnCreateRat {
   onCreateRat {
     aa_target
     chr
@@ -950,11 +879,8 @@ export const onCreateRat = /* GraphQL */ `subscription OnCreateRat {
     __typename
   }
 }
-` as GeneratedSubscription<
-  APITypes.OnCreateRatSubscriptionVariables,
-  APITypes.OnCreateRatSubscription
->;
-export const onUpdateRat = /* GraphQL */ `subscription OnUpdateRat {
+
+subscription OnUpdateRat {
   onUpdateRat {
     aa_target
     chr
@@ -993,11 +919,8 @@ export const onUpdateRat = /* GraphQL */ `subscription OnUpdateRat {
     __typename
   }
 }
-` as GeneratedSubscription<
-  APITypes.OnUpdateRatSubscriptionVariables,
-  APITypes.OnUpdateRatSubscription
->;
-export const onDeleteRat = /* GraphQL */ `subscription OnDeleteRat {
+
+subscription OnDeleteRat {
   onDeleteRat {
     aa_target
     chr
@@ -1036,11 +959,8 @@ export const onDeleteRat = /* GraphQL */ `subscription OnDeleteRat {
     __typename
   }
 }
-` as GeneratedSubscription<
-  APITypes.OnDeleteRatSubscriptionVariables,
-  APITypes.OnDeleteRatSubscription
->;
-export const onCreateAlias = /* GraphQL */ `subscription OnCreateAlias {
+
+subscription OnCreateAlias {
   onCreateAlias {
     id
     alias
@@ -1051,11 +971,8 @@ export const onCreateAlias = /* GraphQL */ `subscription OnCreateAlias {
     __typename
   }
 }
-` as GeneratedSubscription<
-  APITypes.OnCreateAliasSubscriptionVariables,
-  APITypes.OnCreateAliasSubscription
->;
-export const onUpdateAlias = /* GraphQL */ `subscription OnUpdateAlias {
+
+subscription OnUpdateAlias {
   onUpdateAlias {
     id
     alias
@@ -1066,11 +983,8 @@ export const onUpdateAlias = /* GraphQL */ `subscription OnUpdateAlias {
     __typename
   }
 }
-` as GeneratedSubscription<
-  APITypes.OnUpdateAliasSubscriptionVariables,
-  APITypes.OnUpdateAliasSubscription
->;
-export const onDeleteAlias = /* GraphQL */ `subscription OnDeleteAlias {
+
+subscription OnDeleteAlias {
   onDeleteAlias {
     id
     alias
@@ -1081,11 +995,8 @@ export const onDeleteAlias = /* GraphQL */ `subscription OnDeleteAlias {
     __typename
   }
 }
-` as GeneratedSubscription<
-  APITypes.OnDeleteAliasSubscriptionVariables,
-  APITypes.OnDeleteAliasSubscription
->;
-export const onCreateGeneLollipopGraph = /* GraphQL */ `subscription OnCreateGeneLollipopGraph {
+
+subscription OnCreateGeneLollipopGraph {
   onCreateGeneLollipopGraph {
     id
     transcriptId
@@ -1095,11 +1006,11 @@ export const onCreateGeneLollipopGraph = /* GraphQL */ `subscription OnCreateGen
       nextToken
       __typename
     }
-    lollipopLocationsMCF7 {
+    lollipopLocationsMDAMB231 {
       nextToken
       __typename
     }
-    lollipopLocationsMDAMB231 {
+    lollipopLocationsMCF7 {
       nextToken
       __typename
     }
@@ -1112,11 +1023,8 @@ export const onCreateGeneLollipopGraph = /* GraphQL */ `subscription OnCreateGen
     __typename
   }
 }
-` as GeneratedSubscription<
-  APITypes.OnCreateGeneLollipopGraphSubscriptionVariables,
-  APITypes.OnCreateGeneLollipopGraphSubscription
->;
-export const onUpdateGeneLollipopGraph = /* GraphQL */ `subscription OnUpdateGeneLollipopGraph {
+
+subscription OnUpdateGeneLollipopGraph {
   onUpdateGeneLollipopGraph {
     id
     transcriptId
@@ -1126,11 +1034,11 @@ export const onUpdateGeneLollipopGraph = /* GraphQL */ `subscription OnUpdateGen
       nextToken
       __typename
     }
-    lollipopLocationsMCF7 {
+    lollipopLocationsMDAMB231 {
       nextToken
       __typename
     }
-    lollipopLocationsMDAMB231 {
+    lollipopLocationsMCF7 {
       nextToken
       __typename
     }
@@ -1143,11 +1051,8 @@ export const onUpdateGeneLollipopGraph = /* GraphQL */ `subscription OnUpdateGen
     __typename
   }
 }
-` as GeneratedSubscription<
-  APITypes.OnUpdateGeneLollipopGraphSubscriptionVariables,
-  APITypes.OnUpdateGeneLollipopGraphSubscription
->;
-export const onDeleteGeneLollipopGraph = /* GraphQL */ `subscription OnDeleteGeneLollipopGraph {
+
+subscription OnDeleteGeneLollipopGraph {
   onDeleteGeneLollipopGraph {
     id
     transcriptId
@@ -1157,11 +1062,11 @@ export const onDeleteGeneLollipopGraph = /* GraphQL */ `subscription OnDeleteGen
       nextToken
       __typename
     }
-    lollipopLocationsMCF7 {
+    lollipopLocationsMDAMB231 {
       nextToken
       __typename
     }
-    lollipopLocationsMDAMB231 {
+    lollipopLocationsMCF7 {
       nextToken
       __typename
     }
@@ -1174,11 +1079,8 @@ export const onDeleteGeneLollipopGraph = /* GraphQL */ `subscription OnDeleteGen
     __typename
   }
 }
-` as GeneratedSubscription<
-  APITypes.OnDeleteGeneLollipopGraphSubscriptionVariables,
-  APITypes.OnDeleteGeneLollipopGraphSubscription
->;
-export const onCreateLollipopLocations = /* GraphQL */ `subscription OnCreateLollipopLocations {
+
+subscription OnCreateLollipopLocations {
   onCreateLollipopLocations {
     id
     gene
@@ -1212,11 +1114,8 @@ export const onCreateLollipopLocations = /* GraphQL */ `subscription OnCreateLol
     __typename
   }
 }
-` as GeneratedSubscription<
-  APITypes.OnCreateLollipopLocationsSubscriptionVariables,
-  APITypes.OnCreateLollipopLocationsSubscription
->;
-export const onUpdateLollipopLocations = /* GraphQL */ `subscription OnUpdateLollipopLocations {
+
+subscription OnUpdateLollipopLocations {
   onUpdateLollipopLocations {
     id
     gene
@@ -1250,11 +1149,8 @@ export const onUpdateLollipopLocations = /* GraphQL */ `subscription OnUpdateLol
     __typename
   }
 }
-` as GeneratedSubscription<
-  APITypes.OnUpdateLollipopLocationsSubscriptionVariables,
-  APITypes.OnUpdateLollipopLocationsSubscription
->;
-export const onDeleteLollipopLocations = /* GraphQL */ `subscription OnDeleteLollipopLocations {
+
+subscription OnDeleteLollipopLocations {
   onDeleteLollipopLocations {
     id
     gene
@@ -1288,11 +1184,8 @@ export const onDeleteLollipopLocations = /* GraphQL */ `subscription OnDeleteLol
     __typename
   }
 }
-` as GeneratedSubscription<
-  APITypes.OnDeleteLollipopLocationsSubscriptionVariables,
-  APITypes.OnDeleteLollipopLocationsSubscription
->;
-export const onCreateLollipopLocationsMCF7 = /* GraphQL */ `subscription OnCreateLollipopLocationsMCF7 {
+
+subscription OnCreateLollipopLocationsMCF7 {
   onCreateLollipopLocationsMCF7 {
     id
     gene
@@ -1326,11 +1219,8 @@ export const onCreateLollipopLocationsMCF7 = /* GraphQL */ `subscription OnCreat
     __typename
   }
 }
-` as GeneratedSubscription<
-  APITypes.OnCreateLollipopLocationsMCF7SubscriptionVariables,
-  APITypes.OnCreateLollipopLocationsMCF7Subscription
->;
-export const onUpdateLollipopLocationsMCF7 = /* GraphQL */ `subscription OnUpdateLollipopLocationsMCF7 {
+
+subscription OnUpdateLollipopLocationsMCF7 {
   onUpdateLollipopLocationsMCF7 {
     id
     gene
@@ -1364,11 +1254,8 @@ export const onUpdateLollipopLocationsMCF7 = /* GraphQL */ `subscription OnUpdat
     __typename
   }
 }
-` as GeneratedSubscription<
-  APITypes.OnUpdateLollipopLocationsMCF7SubscriptionVariables,
-  APITypes.OnUpdateLollipopLocationsMCF7Subscription
->;
-export const onDeleteLollipopLocationsMCF7 = /* GraphQL */ `subscription OnDeleteLollipopLocationsMCF7 {
+
+subscription OnDeleteLollipopLocationsMCF7 {
   onDeleteLollipopLocationsMCF7 {
     id
     gene
@@ -1402,95 +1289,8 @@ export const onDeleteLollipopLocationsMCF7 = /* GraphQL */ `subscription OnDelet
     __typename
   }
 }
-` as GeneratedSubscription<
-  APITypes.OnDeleteLollipopLocationsMCF7SubscriptionVariables,
-  APITypes.OnDeleteLollipopLocationsMCF7Subscription
->;
-export const onCreateLollipopLocationsMDAMB231 = /* GraphQL */ `subscription OnCreateLollipopLocationsMDAMB231 {
-  onCreateLollipopLocationsMDAMB231 {
-    id
-    sgRNA_ID
-    gene
-    sgRNASequence
-    function
-    aapos
-    aachg
-    clinVar
-    clinVar_ID
-    lfcUNT
-    pvalueUNT
-    fdrUNT
-    nlfcUNT
-    tCGA
-    pTMsiteLoc
-    noncanonicalTranscript
-    cellLine
-    createdAt
-    updatedAt
-    __typename
-  }
-}
-` as GeneratedSubscription<
-  APITypes.OnCreateLollipopLocationsMDAMB231SubscriptionVariables,
-  APITypes.OnCreateLollipopLocationsMDAMB231Subscription
->;
-export const onUpdateLollipopLocationsMDAMB231 = /* GraphQL */ `subscription OnUpdateLollipopLocationsMDAMB231 {
-  onUpdateLollipopLocationsMDAMB231 {
-    id
-    sgRNA_ID
-    gene
-    sgRNASequence
-    function
-    aapos
-    aachg
-    clinVar
-    clinVar_ID
-    lfcUNT
-    pvalueUNT
-    fdrUNT
-    nlfcUNT
-    tCGA
-    pTMsiteLoc
-    noncanonicalTranscript
-    cellLine
-    createdAt
-    updatedAt
-    __typename
-  }
-}
-` as GeneratedSubscription<
-  APITypes.OnUpdateLollipopLocationsMDAMB231SubscriptionVariables,
-  APITypes.OnUpdateLollipopLocationsMDAMB231Subscription
->;
-export const onDeleteLollipopLocationsMDAMB231 = /* GraphQL */ `subscription OnDeleteLollipopLocationsMDAMB231 {
-  onDeleteLollipopLocationsMDAMB231 {
-    id
-    sgRNA_ID
-    gene
-    sgRNASequence
-    function
-    aapos
-    aachg
-    clinVar
-    clinVar_ID
-    lfcUNT
-    pvalueUNT
-    fdrUNT
-    nlfcUNT
-    tCGA
-    pTMsiteLoc
-    noncanonicalTranscript
-    cellLine
-    createdAt
-    updatedAt
-    __typename
-  }
-}
-` as GeneratedSubscription<
-  APITypes.OnDeleteLollipopLocationsMDAMB231SubscriptionVariables,
-  APITypes.OnDeleteLollipopLocationsMDAMB231Subscription
->;
-export const onCreateGeneLollipopGraphMCF7 = /* GraphQL */ `subscription OnCreateGeneLollipopGraphMCF7 {
+
+subscription OnCreateGeneLollipopGraphMCF7 {
   onCreateGeneLollipopGraphMCF7 {
     id
     transcriptId
@@ -1509,11 +1309,8 @@ export const onCreateGeneLollipopGraphMCF7 = /* GraphQL */ `subscription OnCreat
     __typename
   }
 }
-` as GeneratedSubscription<
-  APITypes.OnCreateGeneLollipopGraphMCF7SubscriptionVariables,
-  APITypes.OnCreateGeneLollipopGraphMCF7Subscription
->;
-export const onUpdateGeneLollipopGraphMCF7 = /* GraphQL */ `subscription OnUpdateGeneLollipopGraphMCF7 {
+
+subscription OnUpdateGeneLollipopGraphMCF7 {
   onUpdateGeneLollipopGraphMCF7 {
     id
     transcriptId
@@ -1532,11 +1329,8 @@ export const onUpdateGeneLollipopGraphMCF7 = /* GraphQL */ `subscription OnUpdat
     __typename
   }
 }
-` as GeneratedSubscription<
-  APITypes.OnUpdateGeneLollipopGraphMCF7SubscriptionVariables,
-  APITypes.OnUpdateGeneLollipopGraphMCF7Subscription
->;
-export const onDeleteGeneLollipopGraphMCF7 = /* GraphQL */ `subscription OnDeleteGeneLollipopGraphMCF7 {
+
+subscription OnDeleteGeneLollipopGraphMCF7 {
   onDeleteGeneLollipopGraphMCF7 {
     id
     transcriptId
@@ -1555,11 +1349,8 @@ export const onDeleteGeneLollipopGraphMCF7 = /* GraphQL */ `subscription OnDelet
     __typename
   }
 }
-` as GeneratedSubscription<
-  APITypes.OnDeleteGeneLollipopGraphMCF7SubscriptionVariables,
-  APITypes.OnDeleteGeneLollipopGraphMCF7Subscription
->;
-export const onCreateDomain = /* GraphQL */ `subscription OnCreateDomain {
+
+subscription OnCreateDomain {
   onCreateDomain {
     id
     accessionNumber
@@ -1574,11 +1365,8 @@ export const onCreateDomain = /* GraphQL */ `subscription OnCreateDomain {
     __typename
   }
 }
-` as GeneratedSubscription<
-  APITypes.OnCreateDomainSubscriptionVariables,
-  APITypes.OnCreateDomainSubscription
->;
-export const onUpdateDomain = /* GraphQL */ `subscription OnUpdateDomain {
+
+subscription OnUpdateDomain {
   onUpdateDomain {
     id
     accessionNumber
@@ -1593,11 +1381,8 @@ export const onUpdateDomain = /* GraphQL */ `subscription OnUpdateDomain {
     __typename
   }
 }
-` as GeneratedSubscription<
-  APITypes.OnUpdateDomainSubscriptionVariables,
-  APITypes.OnUpdateDomainSubscription
->;
-export const onDeleteDomain = /* GraphQL */ `subscription OnDeleteDomain {
+
+subscription OnDeleteDomain {
   onDeleteDomain {
     id
     accessionNumber
@@ -1612,11 +1397,8 @@ export const onDeleteDomain = /* GraphQL */ `subscription OnDeleteDomain {
     __typename
   }
 }
-` as GeneratedSubscription<
-  APITypes.OnDeleteDomainSubscriptionVariables,
-  APITypes.OnDeleteDomainSubscription
->;
-export const onCreateAuth = /* GraphQL */ `subscription OnCreateAuth {
+
+subscription OnCreateAuth {
   onCreateAuth {
     id
     createdAt
@@ -1624,11 +1406,8 @@ export const onCreateAuth = /* GraphQL */ `subscription OnCreateAuth {
     __typename
   }
 }
-` as GeneratedSubscription<
-  APITypes.OnCreateAuthSubscriptionVariables,
-  APITypes.OnCreateAuthSubscription
->;
-export const onUpdateAuth = /* GraphQL */ `subscription OnUpdateAuth {
+
+subscription OnUpdateAuth {
   onUpdateAuth {
     id
     createdAt
@@ -1636,11 +1415,8 @@ export const onUpdateAuth = /* GraphQL */ `subscription OnUpdateAuth {
     __typename
   }
 }
-` as GeneratedSubscription<
-  APITypes.OnUpdateAuthSubscriptionVariables,
-  APITypes.OnUpdateAuthSubscription
->;
-export const onDeleteAuth = /* GraphQL */ `subscription OnDeleteAuth {
+
+subscription OnDeleteAuth {
   onDeleteAuth {
     id
     createdAt
@@ -1648,7 +1424,105 @@ export const onDeleteAuth = /* GraphQL */ `subscription OnDeleteAuth {
     __typename
   }
 }
-` as GeneratedSubscription<
-  APITypes.OnDeleteAuthSubscriptionVariables,
-  APITypes.OnDeleteAuthSubscription
->;
+
+subscription OnCreateLollipopLocationsMDAMB231(
+  $id: ID
+  $gene: String
+  $lfcUNT: String
+  $pvalueUNT: String
+  $fdrUNT: String
+) {
+  onCreateLollipopLocationsMDAMB231(
+    id: $id
+    gene: $gene
+    lfcUNT: $lfcUNT
+    pvalueUNT: $pvalueUNT
+    fdrUNT: $fdrUNT
+  ) {
+    sgRNA_ID
+    gene
+    lfcUNT
+    pvalueUNT
+    fdrUNT
+    sgRNASequence
+    function
+    clinVar
+    clinVar_ID
+    aapos
+    nlfcUNT
+    tCGA
+    pTMsiteLoc
+    noncanonicalTranscript
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnUpdateLollipopLocationsMDAMB231(
+  $id: ID
+  $gene: String
+  $lfcUNT: String
+  $pvalueUNT: String
+  $fdrUNT: String
+) {
+  onUpdateLollipopLocationsMDAMB231(
+    id: $id
+    gene: $gene
+    lfcUNT: $lfcUNT
+    pvalueUNT: $pvalueUNT
+    fdrUNT: $fdrUNT
+  ) {
+    sgRNA_ID
+    gene
+    lfcUNT
+    pvalueUNT
+    fdrUNT
+    sgRNASequence
+    function
+    clinVar
+    clinVar_ID
+    aapos
+    nlfcUNT
+    tCGA
+    pTMsiteLoc
+    noncanonicalTranscript
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnDeleteLollipopLocationsMDAMB231(
+  $id: ID
+  $gene: String
+  $lfcUNT: String
+  $pvalueUNT: String
+  $fdrUNT: String
+) {
+  onDeleteLollipopLocationsMDAMB231(
+    id: $id
+    gene: $gene
+    lfcUNT: $lfcUNT
+    pvalueUNT: $pvalueUNT
+    fdrUNT: $fdrUNT
+  ) {
+    sgRNA_ID
+    gene
+    lfcUNT
+    pvalueUNT
+    fdrUNT
+    sgRNASequence
+    function
+    clinVar
+    clinVar_ID
+    aapos
+    nlfcUNT
+    tCGA
+    pTMsiteLoc
+    noncanonicalTranscript
+    createdAt
+    updatedAt
+    __typename
+  }
+}

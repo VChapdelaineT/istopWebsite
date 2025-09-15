@@ -8,7 +8,7 @@ const { ExportCSVButton } = CSVExport;
 import { HashRouter as Router, Switch, Route} from "react-router-dom";
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
-import { getGeneLollipopGraphMCF7 } from "src/graphql/queries";
+import { getGeneLollipopGraph } from "src/graphql/queries";
 
 
 interface CandlestickProps {
@@ -44,119 +44,12 @@ const options = {
   displayLegend: true
 }
 
-const getGeneLollipopGraph2 = /* GraphQL */ `
-  query GetGeneLollipopGraph($id: ID!) {
-    getGeneLollipopGraph(id: $id) {
-      id
-      transcriptId
-      transcriptId2
-      numberOfAAS
-      lollipopLocations(limit:1000000) {
-        items {
-          id
-          gene
-          sgRNASequence
-          function
-          aapos
-          aachg
-          clinVar
-          clinVar_ID
-          lfcUNT
-          pvalueUNT
-          fdrUNT
-          lfcCISP
-          pvalueCISP
-          fdrCISP
-          lfcOLAP
-          pvalueOLAP
-          fdrOLAP
-          lfcDOX
-          pvalueDOX
-          fdrDOX
-          lfcCPT
-          pvalueCPT
-          fdrCPT
-          tCGA
-          pTMsiteLoc
-          noncanonicalTranscript
-          cellLine
-        }
-        nextToken
-      }
-      domains {
-        items {
-          id
-          accessionNumber
-          type
-          start
-          end
-          gene
-          identifier
-          color
-        }
-        nextToken
-      }
-    }
-  }
-`;
-
-const getGeneLollipopGraphMCF72 = /* GraphQL */ `
-  query GetGeneLollipopGraphMCF7($id: ID!) {
-    getGeneLollipopGraphMCF7(id: $id) {
-      id
-      transcriptId
-      transcriptId2
-      numberOfAAS
-      lollipopLocations(limit:1000000) {
-        items {
-          id
-          gene
-          sgRNASequence
-          function
-          aapos
-          aachg
-          clinVar
-          clinVar_ID
-          lfcUNT
-          pvalueUNT
-          fdrUNT
-          lfcCISP
-          pvalueCISP
-          fdrCISP
-          lfcOLAP
-          pvalueOLAP
-          fdrOLAP
-          lfcDOX
-          pvalueDOX
-          fdrDOX
-          lfcCPT
-          pvalueCPT
-          fdrCPT
-          tCGA
-          pTMsiteLoc
-          noncanonicalTranscript
-          cellLine
-        }
-        nextToken
-      }
-      domains {
-        items {
-          id
-          accessionNumber
-          type
-          start
-          end
-          gene
-          identifier
-          color
-        }
-        nextToken
-      }
-    }
-  }
-`;
 const defaultHiddenHeaders = []
-const tableHeaders = ['gene','sgRNASequence','function', 'aachg', 'clinVar','clinVar_ID','lfcUNT','pvalueUNT','fdrUNT','lfcCISP','pvalueCISP','fdrCISP','lfcCPT','pvalueCPT','fdrCPT','lfcDOX','pvalueDOX','fdrDOX','lfcOLAP','pvalueOLAP','fdrOLAP','tCGA','pTMsiteLoc','noncanonicalTranscript','cellLine']
+
+
+
+/* -------------------------------------------- ADD to Table ------------------------------------ */
+const tableHeaders = ['gene','sgRNASequence','function', 'aachg', 'clinVar','clinVar_ID','lfcUNT','nlfcUNT','pvalueUNT','fdrUNT','lfcCISP','nlfcCISP','pvalueCISP','fdrCISP','lfcCPT','nlfcCPT','pvalueCPT','fdrCPT','lfcDOX','nlfcDOX','pvalueDOX','fdrDOX','lfcOLAP','nlfcOLAP','pvalueOLAP','fdrOLAP','nlfcOLAP','tCGA','pTMsiteLoc','noncanonicalTranscript','cellLine']
 const tableHeaderTranslation = new Map(
   [
     ['gene', 'Gene'],
@@ -172,6 +65,11 @@ const tableHeaderTranslation = new Map(
     ['pvalueCISP', 'P-Value Cisplatin'],
     ['fdrCISP', 'FDR Cisplatin'],
     ['lfcCPT', 'LFC Camptothecin'],
+    ['nlfcUNT', 'nLFC Untreated'],
+    ['nlfcCISP', 'nLFC Cisplatin'],
+    ['nlfcDOX', 'nLFC Doxorubicin'],
+    ['nlfcOLAP', 'nLFC Olaparib'],
+    ['nlfcCPT', 'nLFC Camptothecin'],
     ['pvalueCPT', 'P-Value Camptothecin'],
     ['fdrCPT', 'FDR Camptothecin'],
     ['lfcDOX', 'LFC Doxorubicin'],
@@ -187,6 +85,11 @@ const tableHeaderTranslation = new Map(
   ]
 )
 
+const lollipopMap: Record<string, any> = {
+  MCF10A: this.state.renderConfigData.lollipops,
+  MCF7: this.state.renderConfigData.lollipopsMCF7,
+  MDAMB231: this.state.renderConfigData.lollipopsMDAMB231,
+};
 
 export class CandlestickResults extends React.Component<CandlestickProps, CandlestickState> {
 
@@ -198,7 +101,7 @@ export class CandlestickResults extends React.Component<CandlestickProps, Candle
             funCheckBoxChecked: new Map<string, boolean>([["nonsense",false], ["missense",false],["splice",false],["synonymous",false],["other",false]]),
             pValueLessThan: new Map<string, boolean>([["UNT",false],["CISP",false],["OLAP",false],["DOX",false],["CPT",false]]),
             radioChecked: new Map<string, boolean>([["UNT",true],["CISP",false],["OLAP",false],["DOX",false],["CPT",false]]),
-            radioCheckedCell: new Map<string,boolean>([["MCF10A", true], ["MCF7", false]]),
+            radioCheckedCell: new Map<string,boolean>([["MCF10A", true], ["MCF7", false],['MDA-MB-231']]),
             curPressedCell: "MCF10A",
             gene: "",
             treatment: "UNT",
@@ -260,10 +163,21 @@ export class CandlestickResults extends React.Component<CandlestickProps, Candle
         const query = {
           id: this.state.gene
         };
-        API.graphql(graphqlOperation(getGeneLollipopGraph2, query)).then(result => { //query first database
+        API.graphql(graphqlOperation(getGeneLollipopGraph, query)).then(result => { //query first database
           const filteredLocations = this.filterLocations(result.data.getGeneLollipopGraph.lollipopLocations.items)
-          API.graphql(graphqlOperation(getGeneLollipopGraphMCF72, query)).then(secondQueryResult => {//query second database
-            const filteredMCF7 = this.filterLocations(secondQueryResult.data.getGeneLollipopGraphMCF7.lollipopLocations.items)
+        }).catch(err => {
+          console.log(err)
+        })
+          API.graphql(graphqlOperation(getGeneLollipopGraph, query)).then(secondQueryResult => {//query second database
+            const filteredMCF7 = this.filterLocations(secondQueryResult.data.getGeneLollipopGraph.lollipopLocationsMCF7.items)
+        }).catch(err => {
+          console.log(err)
+        })
+          API.graphql(graphqlOperation(getGeneLollipopGraph, query)).then(thirdQueryResult => {//query second database
+            const filteredMDAMB231 = this.filterLocations(thirdQueryResult.data.getGeneLollipopGraph.lollipopLocationsMDAMB231.items)
+        }).catch(err => {
+          console.log(err)
+        })
             const xMax:number = parseInt(result.data.getGeneLollipopGraph.numberOfAAS)
 
             const domains = result.data.getGeneLollipopGraph.domains.items.map(domain => {
@@ -297,15 +211,17 @@ export class CandlestickResults extends React.Component<CandlestickProps, Candle
                 domains: sortedDomains,
                 xMax: xMax,
                 curPressedCell: filteredMCF7.length == 0 ? "MCF10A" : prevState.curPressedCell,
-                radioCheckedCell: filteredMCF7.length == 0 ? new Map<string,boolean>([["MCF10A", true], ["MCF7", false]]) : prevState.radioCheckedCell
+                radioCheckedCell: filteredMCF7.length == 0
+                  ? new Map<string, boolean>([
+                      ["MCF10A", true],
+                      ["MCF7", false],
+                      ["MDAMB231", false]
+                    ])
+                  : prevState.radioCheckedCell,
               }
             })
-            this.updateState(filteredLocations, filteredMCF7)
+            this.updateState(filteredLocations, filteredMCF7,filteredMDAMB231)
           })
-         
-        }).catch(err => {
-          console.log(err)
-        })
     }
 
     lollipopUIState = (location, isSelected) => {
@@ -327,7 +243,7 @@ export class CandlestickResults extends React.Component<CandlestickProps, Candle
       }
     }
 
-    updateState = (filteredLocations, filteredMCF7) => {
+    updateState = (filteredLocations, filteredMCF7,filteredMDAMB231) => {
           this.setState(prevState => {
             return {
                 ...prevState,
@@ -338,6 +254,7 @@ export class CandlestickResults extends React.Component<CandlestickProps, Candle
                     hugoGeneSymbol: 'Log Fold Change',
                     lollipops: filteredLocations,
                     lollipopsMCF7: filteredMCF7
+                    filteredMDAMB231 : filteredMDAMB231
                   }
             }
     })
@@ -382,7 +299,7 @@ export class CandlestickResults extends React.Component<CandlestickProps, Candle
             pValueLessThan: new Map<string, boolean>([["UNT",false],["CISP",false],["OLAP",false],["DOX",false],["CPT",false]])
           }
         })
-        this.updateState(this.state.renderConfigData.lollipops, this.state.renderConfigData.lollipopsMCF7)
+        this.updateState(this.state.renderConfigData.lollipops, this.state.renderConfigData.lollipopsMCF7, this.state.renderConfigData.lollipopsMDAMB231)
       }
     }
 
@@ -422,7 +339,7 @@ export class CandlestickResults extends React.Component<CandlestickProps, Candle
             lollipopsClicked: new Map<string, boolean>()
           }
         })
-        this.updateState(this.state.renderConfigData.lollipops, this.state.renderConfigData.lollipopsMCF7)
+        this.updateState(this.state.renderConfigData.lollipops, this.state.renderConfigData.lollipopsMCF7, this.state.renderConfigData.lollipopsMDAMB231)
       }
     }
 
@@ -481,7 +398,7 @@ export class CandlestickResults extends React.Component<CandlestickProps, Candle
 
     render() {
         console.log(this.state.pValueLessThan)
-        var filteredLollipops = this.state.curPressedCell === "MCF10A" ? this.state.renderConfigData.lollipops :  this.state.renderConfigData.lollipopsMCF7 //If then to determine which table to render
+        var filteredLollipops = lollipopMap[this.state.curPressedCell] ?? [];
         
         var funFilters:string[] = Array.from(this.state.funCheckBoxChecked).filter(funFilter => funFilter[1]).map(funFilter => funFilter[0])
         if (funFilters.length > 0) {
@@ -516,18 +433,22 @@ export class CandlestickResults extends React.Component<CandlestickProps, Candle
             ...filteredLollipop,
             aapos: Number(filteredLollipop.aapos),
             lfcCISP: Number(filteredLollipop.lfcCISP),
+            nlfcCISP: Number(filteredLollipop.nlfcCISP),
             lfcUNT: Number(filteredLollipop.lfcUNT),
-            pvalueUNT: Number(filteredLollipop.pvalueUNT),
+            nlfcUNT:Number(filteredLollipop.nlfcUNT),
             fdrUNT: Number(filteredLollipop.fdrUNT),
             pvalueCISP: Number(filteredLollipop.pvalueCISP),
             fdrCISP: Number(filteredLollipop.fdrCISP),
             lfcCPT: Number(filteredLollipop.lfcCPT),
+            nlfcCPT: Number(filteredLollipop.nlfcCPT),
             pvalueCPT: Number(filteredLollipop.pvalueCPT),
             fdrCPT: Number(filteredLollipop.fdrCPT),
             lfcDOX: Number(filteredLollipop.lfcDOX),
+            nlfcDOX: Number(filteredLollipop.nlfcDOX),
             pvalueDOX: Number(filteredLollipop.pvalueDOX),
             fdrDOX: Number(filteredLollipop.fdrDOX),
             lfcOLAP: Number(filteredLollipop.lfcOLAP),
+            nlfcOLAP: Number(filteredLollipop.nlfcOLAP),
             pvalueOLAP: Number(filteredLollipop.pvalueOLAP),
             fdrOLAP: Number(filteredLollipop.fdrOLAP),
           }
@@ -643,7 +564,9 @@ export class CandlestickResults extends React.Component<CandlestickProps, Candle
                         <input type="checkbox" className="rightSideButton" onClick={this.setPValueLessThan("OLAP")} checked={this.state.pValueLessThan.get("OLAP")}></input>
                       </div>
                     </div>
-                    
+                    <div className= "filterColumn">
+                        {this.state.renderConfigData.lollipopsMDAMB231.length > 0 ? <label className="filterBody"><input type="radio" className="rightSideButton" onClick={this.setCellLine("MDAMB231")} checked={this.state.radioCheckedCell.get("MDAMB231")}/>&nbsp;MDA-MB-231</label> : <label></label>}
+                      </div>  
                     <div className="filterRow secondFilterRow">
                       <div className="filterColumn">
                         <label className="filterBody"><input type="radio" className="rightSideButton" onClick={this.setTreatment("DOX")} checked={this.state.radioChecked.get("DOX")}/>&nbsp;Doxorubicin</label>
