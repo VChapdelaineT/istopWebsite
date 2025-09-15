@@ -175,7 +175,7 @@ export class CandlestickResults extends React.Component<CandlestickProps, Candle
           id: this.state.gene
         };
 
-        API.graphql(graphqlOperation(getGeneLollipopGraph2, query)).then(result => { //query first database
+        API.graphql(graphqlOperation(getGeneLollipopGraph, query)).then(result => { //query first database
         const filteredLocations = this.filterLocations(result.data.getGeneLollipopGraph.lollipopLocations.items)
         
         API.graphql(graphqlOperation(getGeneLollipopGraph, query)).then(secondQueryResult => {//query second database
