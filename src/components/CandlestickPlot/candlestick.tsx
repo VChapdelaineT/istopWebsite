@@ -586,237 +586,185 @@ export class CandlestickResults extends React.Component<CandlestickProps, Candle
       }
     }));
 
-    const toDisplay = this.state.isInSearch ? (
-      <div></div>
-    ) : (
-      <div>
-        <div>
-          <br />
-          <b>{this.state.displayGene}</b> <i>{this.state.transcriptId}</i>
-          <br />
-          <div className="plotLeft">
-            <LollipopPlot
-              domains={this.state.domains}
-              lollipops={lollipops}
-              vizWidth={765}
-              vizHeight={500}
-              hugoGeneSymbol={this.state.renderConfigData.hugoGeneSymbol}
-              xMax={this.state.xMax}
-              options={options}
-              proteinLength={this.state.numberOfAAS}
-              onLollipopClick={this.lollipopClickCallback}
-            />
-          </div>
-
-          <div className="radioRight overflowAuto">
-            <p className="filterHeaderMain"><b>Filters</b></p>
-            <div className="filterBox">
-              <div className="filterRow secondFilterRow">
-                <div className="filterColumn">
-                  <label className="filterHeader"><b>Treatment</b></label>
-                </div>
-                <div className="filterColumn">
-                  <label className="filterHeader"><b>{"p<0.01"}</b></label>
-                </div>
-                <div className="filterColumn">
-                  <label className="filterHeader"><b>Cell Line</b></label>
-                </div>
-              </div>
-
-              <div className="filterRow secondFilterRow">
-                <div className="filterColumn">
-                  <label className="filterBody">
-                    <input type="radio" className="rightSideButton" onClick={this.setTreatment("UNT")} checked={this.state.radioChecked.get("UNT")} />
-                    &nbsp;Untreated
-                  </label>
-                </div>
-                <div className="filterColumn">
-                  <input type="checkbox" className="rightSideButton" onClick={this.setPValueLessThan("UNT")} checked={this.state.pValueLessThan.get("UNT")} />
-                </div>
-                <div className="filterColumn">
-                  <label className="filterBody">
-                    <input type="radio" className="rightSideButton" onClick={this.setCellLine("MCF10A")} checked={this.state.radioCheckedCell.get("MCF10A")} />
-                    &nbsp;MCF10A
-                  </label>
-                </div>
-              </div>
-
-              <div className="filterRow secondFilterRow">
-                <div className="filterColumn">
-                  <label className="filterBody">
-                    <input type="radio" className="rightSideButton" onClick={this.setTreatment("CISP")} checked={this.state.radioChecked.get("CISP")} />
-                    &nbsp;Cisplatin
-                  </label>
-                </div>
-                <div className="filterColumn">
-                  <input type="checkbox" className="rightSideButton" onClick={this.setPValueLessThan("CISP")} checked={this.state.pValueLessThan.get("CISP")} />
-                </div>
-                <div className="filterColumn">
-                  {this.state.renderConfigData.lollipopsMCF7.length > 0 ? (
-                    <label className="filterBody">
-                      <input type="radio" className="rightSideButton" onClick={this.setCellLine("MCF7")} checked={this.state.radioCheckedCell.get("MCF7")} />
-                      &nbsp;MCF7
-                    </label>
-                  ) : <label></label>}
-                </div>
-              </div>
-
-              <div className="filterRow secondFilterRow">
-                <div className="filterColumn">
-                  <label className="filterBody">
-                    <input type="radio" className="rightSideButton" onClick={this.setTreatment("OLAP")} checked={this.state.radioChecked.get("OLAP")} />
-                    &nbsp;Olaparib
-                  </label>
-                </div>
-                <div className="filterColumn">
-                  <input type="checkbox" className="rightSideButton" onClick={this.setPValueLessThan("OLAP")} checked={this.state.pValueLessThan.get("OLAP")} />
-                </div>
-                <div className="filterColumn">
-                  {this.state.renderConfigData.lollipopsMDAMB231 && this.state.renderConfigData.lollipopsMDAMB231.length > 0 ? (
-                    <label className="filterBody">
-                      <input type="radio" className="rightSideButton" onClick={this.setCellLine("MDAMB231")} checked={this.state.radioCheckedCell.get("MDAMB231")} />
-                      &nbsp;MDA-MB-231
-                    </label>
-                  ) : <label></label>}
-                </div>
-              </div>
-
-              <div className="filterRow secondFilterRow">
-                <div className="filterColumn">
-                  <label className="filterBody">
-                    <input type="radio" className="rightSideButton" onClick={this.setTreatment("DOX")} checked={this.state.radioChecked.get("DOX")} />
-                    &nbsp;Doxorubicin
-                  </label>
-                </div>
-                <div className="filterColumn">
-                  <input type="checkbox" className="rightSideButton" onClick={this.setPValueLessThan("DOX")} checked={this.state.pValueLessThan.get("DOX")} />
-                </div>
-              </div>
-
-              <div className="filterRow secondFilterRow">
-                <div className="filterColumn">
-                  <label className="filterBody">
-                    <input type="radio" className="rightSideButton" onClick={this.setTreatment("CPT")} checked={this.state.radioChecked.get("CPT")} />
-                    &nbsp;Camptothecin
-                  </label>
-                </div>
-                <div className="filterColumn">
-                  <input type="checkbox" className="rightSideButton" onClick={this.setPValueLessThan("CPT")} checked={this.state.pValueLessThan.get("CPT")} />
-                </div>
-              </div>
-            </div>
-
-            <br /><br />
-            <b>Mutational outcome</b>
-            <br />
-            <label className="mutationalOutcomeNonsense">
-              <input type="checkbox" onClick={this.setFun("nonsense")} checked={this.state.funCheckBoxChecked.get("nonsense")} />
-              &nbsp;Nonsense
-            </label>
-            <br />
-            <label className="mutationalOutcomeMissense">
-              <input type="checkbox" onClick={this.setFun("missense")} checked={this.state.funCheckBoxChecked.get("missense")} />
-              &nbsp;Missense
-            </label>
-            <br />
-            <label className="mutationalOutcomeSplice">
-              <input type="checkbox" onClick={this.setFun("splice")} checked={this.state.funCheckBoxChecked.get("splice")} />
-              &nbsp;Splice
-            </label>
-            <br />
-            <label className="mutationalOutcomeSilent">
-              <input type="checkbox" onClick={this.setFun("synonymous")} checked={this.state.funCheckBoxChecked.get("synonymous")} />
-              &nbsp;Silent
-            </label>
-            <br />
-            <label className="mutationalOutcomeOther">
-              <input type="checkbox" onClick={this.setFun("other")} checked={this.state.funCheckBoxChecked.get("other")} />
-              &nbsp;Other
-            </label>
-          </div>
-
-          <br /><br /><br />
-        </div>
-
-        <div>
-          <p className="helvetica reducedMargin">
-            The table below contains information on the lollipops displayed in the plot. Values of individual lollipops will be shown by clicking on them in the plot.
-          </p>
-        </div>
-
-        <div>
-          <div>
-            <ToolkitProvider
-              keyField='sgRNASequence'
-              columns={bootStrapHeaders}
-              data={displayLollipops}
-              bootstrap4
-              striped
-              condensed
-              defaultSorted={[{ dataField: 'aapos', order: 'asc' }]}
-            >
-              {props => (
-                <div>
-                  <ExportCSVButton {...props.csvProps}>Export CSV</ExportCSVButton>
-                  <hr />
-                  <BootstrapTable
-                    classes="table-responsive scrollBarTable"
-                    tdStyle={{ whiteSpace: 'normal' }}
-                    {...props.baseProps}
+     const toDisplay = this.state.isInSearch ? 
+            <div></div> :
+            <div>
+            <div>
+                <br/>
+                <b>{this.state.displayGene}</b> <i>{this.state.transcriptId}</i>
+                <br/>
+                <div className="plotLeft">
+                  <LollipopPlot
+                      domains={this.state.domains}
+                      lollipops={lollipops}
+                      vizWidth={765}
+                      vizHeight={500}
+                      hugoGeneSymbol={this.state.renderConfigData.hugoGeneSymbol}
+                      xMax={this.state.xMax}
+                      options={options}
+                      proteinLength={this.state.numberOfAAS}
+                      onLollipopClick = {this.lollipopClickCallback.bind(this)}
                   />
                 </div>
-              )}
-            </ToolkitProvider>
-            <br />
-            <Button onClick={this.goBack}>Go Back</Button>
+                <div className="radioRight overlfowAuto">
+                  <p className="filterHeaderMain"><b>{"Filters"}</b></p>
+                  <div className="filterBox">
+                    <div className="filterRow secondFilterRow">
+                      <div className="filterColumn">
+                        <label className="filterHeader"><b>Treatment</b></label>
+                      </div>
+                      <div className="filterColumn">
+                        <label className="filterHeader"><b>{"p<0.01"}</b></label>
+                      </div>
+                      <div className= "filterColumn">
+                        <label className="filterHeader"><b>Cell Line</b></label>
+                      </div>
+                    </div>
+
+                    <div className="filterRow secondFilterRow">
+                      <div className="filterColumn">
+                        <label className="filterBody"><input type="radio" className="rightSideButton" onClick={this.setTreatment("UNT")} checked={this.state.radioChecked.get("UNT")}/>&nbsp;Untreated</label>
+                      </div>
+                      <div className= "filterColumn">
+                        <input type="checkbox" className="rightSideButton" onClick={this.setPValueLessThan("UNT")} checked={this.state.pValueLessThan.get("UNT")}></input>
+                      </div>
+                      <div className= "filterColumn">
+                        <label className="filterBody"><input type="radio" className="rightSideButton" onClick={this.setCellLine("MCF10A")} checked={this.state.radioCheckedCell.get("MCF10A")}/>&nbsp;MCF10A</label>
+                      </div>
+                      
+                    </div>
+
+                    <div className="filterRow secondFilterRow">
+                      <div className="filterColumn">
+                        <label className="filterBody"><input type="radio" className="rightSideButton" onClick={this.setTreatment("CISP")} checked={this.state.radioChecked.get("CISP")}/>&nbsp;Cisplatin</label>
+                      </div>
+                      <div className="filterColumn">
+                        <input type="checkbox" className="rightSideButton" onClick={this.setPValueLessThan("CISP")} checked={this.state.pValueLessThan.get("CISP")}></input>
+                      </div>
+                      <div className= "filterColumn">
+                        {this.state.renderConfigData.lollipopsMCF7.length > 0 ? <label className="filterBody"><input type="radio" className="rightSideButton" onClick={this.setCellLine("MCF7")} checked={this.state.radioCheckedCell.get("MCF7")}/>&nbsp;MCF7</label> : <label></label>}
+                      </div>                      
+                    </div>
+                    
+                    <div className="filterRow secondFilterRow">
+                      <div className="filterColumn">
+                        <label className="filterBody"><input type="radio" className="rightSideButton" onClick={this.setTreatment("OLAP")} checked={this.state.radioChecked.get("OLAP")}/>&nbsp;Olaparib</label>
+                      </div>
+                      <div className="filterColumn">
+                        <input type="checkbox" className="rightSideButton" onClick={this.setPValueLessThan("OLAP")} checked={this.state.pValueLessThan.get("OLAP")}></input>
+                      </div>
+                        <div className= "filterColumn">
+                        {this.state.renderConfigData.lollipopsMDAMB321.length > 0 ? <label className="filterBody"><input type="radio" className="rightSideButton" onClick={this.setCellLine("MDAMB321")} checked={this.state.radioCheckedCell.get("MDAMB321")}/>&nbsp;MDA-MB-321</label> : <label></label>}
+                      </div>                      
+                    </div>
+                    
+                    <div className="filterRow secondFilterRow">
+                      <div className="filterColumn">
+                        <label className="filterBody"><input type="radio" className="rightSideButton" onClick={this.setTreatment("DOX")} checked={this.state.radioChecked.get("DOX")}/>&nbsp;Doxorubicin</label>
+                      </div>
+                      <div className="filterColumn">
+                        <input type="checkbox" className="rightSideButton" onClick={this.setPValueLessThan("DOX")} checked={this.state.pValueLessThan.get("DOX")}></input>
+                      </div>
+                    </div>
+                    
+                    <div className="filterRow secondFilterRow">
+                      <div className="filterColumn">
+                        <label className="filterBody"><input type="radio" className="rightSideButton" onClick={this.setTreatment("CPT")} checked={this.state.radioChecked.get("CPT")}/>&nbsp;Camptothecin</label>
+                      </div>
+                      <div className="filterColumn">
+                        <input type="checkbox" className="rightSideButton" onClick={this.setPValueLessThan("CPT")} checked={this.state.pValueLessThan.get("CPT")}></input>
+                      </div>
+                    </div>
+                  </div>
+
+                  <br/>
+                  <br/>
+                  <b>Mutational outcome</b>
+                  <br/>
+                  <label className="mutationalOutcomeNonsense"><input type="checkbox" onClick={this.setFun("nonsense")} checked={this.state.funCheckBoxChecked.get("nonsense")}/>&nbsp;Nonsense</label>
+                  <br/>
+                  <label className="mutationalOutcomeMissense"><input type="checkbox" onClick={this.setFun("missense")} checked={this.state.funCheckBoxChecked.get("missense")}/>&nbsp;Missense</label>
+                  <br/>
+                  <label className="mutationalOutcomeSplice"><input type="checkbox" onClick={this.setFun("splice")} checked={this.state.funCheckBoxChecked.get("splice")}/>&nbsp;Splice</label>
+                  <br/>
+                  <label className="mutationalOutcomeSilent"><input type="checkbox" onClick={this.setFun("synonymous")} checked={this.state.funCheckBoxChecked.get("synonymous")}/>&nbsp;Silent</label>
+                  <br/>
+                  <label className="mutationalOutcomeOther"><input type="checkbox" onClick={this.setFun("other")} checked={this.state.funCheckBoxChecked.get("other")}/>&nbsp;Other</label>
+                </div>
+                <br/>
+                <br/>
+                <br/>
+              </div>
+              <div>
+              <p className="helvetica reducedMargin">The table below contains information on the lollipops displayed in the plot. Values of individual lollipops will be shown by clicking on them in the plot.</p>
+              </div>
+              <div>
+                <div> 
+                <ToolkitProvider
+                  keyField='sgRNASequence' 
+                  columns ={bootStrapHeaders}
+                  data={displayLollipops}
+                  bootstrap4={true}
+                  striped
+                  condensed={true}
+                  defaultSorted = {
+                    [
+                      {
+                        dataField:'aapos',
+                        order: 'asc'
+                      }
+                    ]}
+                >
+                  {
+                    props => (
+                      <div>
+                        <ExportCSVButton { ...props.csvProps }>Export CSV</ExportCSVButton>
+                        <hr />
+                        <BootstrapTable classes ="table-responsive scrollBarTable" tdStyle={{whiteSpace:'normal'}}
+                          {...props.baseProps}/>
+                      </div>
+                    )
+                  }
+                </ToolkitProvider>
+                  <br/>
+                  <Button onClick={this.goBack}>Go Back</Button>
+                </div>
+            </div>
+            </div>
+
+        return (
+          <div>
+            <Router basename="/">
+              <Navbar bg="dark" variant="dark">
+                <Navbar.Collapse>
+                  <Nav className="ml-auto">
+                    <Nav.Link href="https://www.ciccialab.com">
+                      <i className="glyphicon glyphicon-home"></i> Ciccia Lab
+                    </Nav.Link>
+                    <span className="nav-link pointer" onClick={this.props.setMode}>iSTOP</span>
+                  </Nav>
+                </Navbar.Collapse>
+              </Navbar>
+              <Switch/>
+            </Router>
+           
+            <div>
+                <form onSubmit={this.handleSubmit}>
+                    <h2 className="helvetica">Functional interrogation of DNA damage response variants with base editing screens</h2>
+                    <p className="filterBody">For more information, please click here: <a href="https://www.cell.com/cell/fulltext/S0092-8674(21)00084-2"> Cuella-Martin <i>et al.</i>. Cell. 2021; 184(4): P1081-1097.E19</a></p>
+                    <br/>
+                    <p className="filterHeaderMain">Gene Search</p>
+                    <b><p className="helvetica reducedMargin">Filter Box</p></b>
+                    <p className="helvetica reducedMargin">Write the initial characters of the gene name and select it from the drop down list</p>
+                    <input className="smallerInput" type="text" name="filter" onChange={this.filterDropDown}/>
+                    <select className="submitAlign" onChange={this.dropDownChange}> {this.state.curGeneList.map((typeName) => <option key={typeName}>{typeName}</option>)} </select>
+                    <br/>
+                    <input type="submit" value="Submit"/>
+                    <br/>
+                </form>
+            </div>
+            {toDisplay}  
           </div>
-        </div>
-      </div>
-    );
-
-    return (
-      <div>
-        <Router basename="/">
-          <Navbar bg="dark" variant="dark">
-            <Navbar.Collapse>
-              <Nav className="ml-auto">
-                <Nav.Link href="https://www.ciccialab.com">
-                  <i className="glyphicon glyphicon-home"></i> Ciccia Lab
-                </Nav.Link>
-                <span className="nav-link pointer" onClick={this.props.setMode}>iSTOP</span>
-              </Nav>
-            </Navbar.Collapse>
-          </Navbar>
-          <Switch />
-        </Router>
-
-        <div>
-          <form onSubmit={this.handleSubmit}>
-            <h2 className="helvetica">Functional interrogation of DNA damage response variants with base editing screens</h2>
-            <p className="filterBody">
-              For more information, please click here:{" "}
-              <a href="https://www.cell.com/cell/fulltext/S0092-8674(21)00084-2">
-                Cuella-Martin <i>et al.</i>. Cell. 2021; 184(4): P1081-1097.E19
-              </a>
-            </p>
-            <br />
-            <p className="filterHeaderMain">Gene Search</p>
-            <b><p className="helvetica reducedMargin">Filter Box</p></b>
-            <p className="helvetica reducedMargin">
-              Write the initial characters of the gene name and select it from the drop down list
-            </p>
-            <input className="smallerInput" type="text" name="filter" onChange={this.filterDropDown} />
-            <select className="submitAlign" onChange={this.dropDownChange}>
-              {sortedGeneList.map((typeName) => <option key={typeName}>{typeName}</option>)}
-            </select>
-            <br />
-            <input type="submit" value="Submit" />
-            <br />
-          </form>
-        </div>
-
-        {toDisplay}
-      </div>
-    );
-  }
+        )
+    }
 }
