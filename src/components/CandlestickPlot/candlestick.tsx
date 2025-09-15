@@ -16,7 +16,7 @@ const getGeneLollipopGraph = /* GraphQL */ `query GetGeneLollipopGraph($id: ID!)
     transcriptId
     transcriptId2
     numberOfAAS
-    lollipopLocations {
+    lollipopLocations(limit:1000000) {
         items {
           id
           gene
@@ -48,7 +48,7 @@ const getGeneLollipopGraph = /* GraphQL */ `query GetGeneLollipopGraph($id: ID!)
         }
         nextToken
       }
-    lollipopLocationsMCF7 {
+    lollipopLocationsMCF7(limit:1000000) {
         items {
           id
           gene
@@ -80,7 +80,7 @@ const getGeneLollipopGraph = /* GraphQL */ `query GetGeneLollipopGraph($id: ID!)
         }
         nextToken
       }
-    lollipopLocationsMDAMB231 {
+    lollipopLocationsMDAMB231(limit:1000000) {
         items {
           id
           gene
@@ -101,7 +101,7 @@ const getGeneLollipopGraph = /* GraphQL */ `query GetGeneLollipopGraph($id: ID!)
         }
         nextToken
       }
-      domains {
+      domains(limit:1000000) {
         items {
           id
           accessionNumber
