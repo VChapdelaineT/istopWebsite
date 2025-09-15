@@ -101,7 +101,7 @@ export class CandlestickResults extends React.Component<CandlestickProps, Candle
             funCheckBoxChecked: new Map<string, boolean>([["nonsense",false], ["missense",false],["splice",false],["synonymous",false],["other",false]]),
             pValueLessThan: new Map<string, boolean>([["UNT",false],["CISP",false],["OLAP",false],["DOX",false],["CPT",false]]),
             radioChecked: new Map<string, boolean>([["UNT",true],["CISP",false],["OLAP",false],["DOX",false],["CPT",false]]),
-            radioCheckedCell: new Map<string,boolean>([["MCF10A", true], ["MCF7", false],['MDA-MB-231']]),
+            radioCheckedCell: new Map<string,boolean>([["MCF10A", true], ["MCF7", false],['MDA-MB-231',false]]),
             curPressedCell: "MCF10A",
             gene: "",
             treatment: "UNT",
@@ -221,7 +221,7 @@ export class CandlestickResults extends React.Component<CandlestickProps, Candle
               }
             })
             this.updateState(filteredLocations, filteredMCF7,filteredMDAMB231)
-          })
+          });
     }
 
     lollipopUIState = (location, isSelected) => {
@@ -253,7 +253,7 @@ export class CandlestickResults extends React.Component<CandlestickProps, Candle
                     vizWidth: 665, // hardcoded
                     hugoGeneSymbol: 'Log Fold Change',
                     lollipops: filteredLocations,
-                    lollipopsMCF7: filteredMCF7
+                    lollipopsMCF7: filteredMCF7,
                     filteredMDAMB231 : filteredMDAMB231
                   }
             }
@@ -356,7 +356,7 @@ export class CandlestickResults extends React.Component<CandlestickProps, Candle
         })
         
       }
-    }
+    };
 
     translateTreatmentName() {
       if(this.state.treatment === "UNT") {
@@ -394,7 +394,7 @@ export class CandlestickResults extends React.Component<CandlestickProps, Candle
           lollipopsClicked:mapCopy
         }
       })
-    }
+    };
 
     render() {
         console.log(this.state.pValueLessThan)
@@ -676,4 +676,4 @@ export class CandlestickResults extends React.Component<CandlestickProps, Candle
           </div>
         )
     }
-}
+
