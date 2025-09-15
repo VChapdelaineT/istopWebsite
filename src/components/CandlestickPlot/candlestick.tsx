@@ -220,7 +220,7 @@ export class CandlestickResults extends React.Component<CandlestickProps, Candle
                   : prevState.radioCheckedCell,
               }
             })
-            this.updateState(filteredLocations, filteredMCF7,filteredMDAMB231)
+            this.updateState(filteredLocations, filteredMCF7,filteredMDAMB231);
           });
     }
 
@@ -257,8 +257,8 @@ export class CandlestickResults extends React.Component<CandlestickProps, Candle
                     filteredMDAMB231 : filteredMDAMB231
                   }
             }
-    })
-  }
+    });
+  };
 
   filterDropDown = (e) => {
       const substring:string = e.target.value

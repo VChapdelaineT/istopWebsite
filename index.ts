@@ -520,13 +520,16 @@ export declare type LollipopLocationsMCF7Model = LazyLoading extends LazyLoading
 export declare const LollipopLocationsMCF7Model: (new (init: ModelInit<LollipopLocationsMCF7Model>) => LollipopLocationsMCF7Model)
 
 type EagerLollipopLocationsMDAMB231Model = {
+  readonly aachg?: string | null;
   readonly aapos?: string | null;
+  readonly cellLine?: string | null;
   readonly clinVar?: string | null;
   readonly clinVar_ID?: string | null;
   readonly createdAt: string;
   readonly fdrUNT?: string | null;
-  readonly function?: string | null;
+  readonly function: string;
   readonly gene: string;
+  readonly id: string;
   readonly lfcUNT?: string | null;
   readonly nlfcUNT?: string | null;
   readonly noncanonicalTranscript?: string | null;
@@ -539,13 +542,16 @@ type EagerLollipopLocationsMDAMB231Model = {
 }
 
 type LazyLollipopLocationsMDAMB231Model = {
+  readonly aachg?: string | null;
   readonly aapos?: string | null;
+  readonly cellLine?: string | null;
   readonly clinVar?: string | null;
   readonly clinVar_ID?: string | null;
   readonly createdAt: string;
   readonly fdrUNT?: string | null;
-  readonly function?: string | null;
+  readonly function: string;
   readonly gene: string;
+  readonly id: string;
   readonly lfcUNT?: string | null;
   readonly nlfcUNT?: string | null;
   readonly noncanonicalTranscript?: string | null;
@@ -562,12 +568,12 @@ export declare type LollipopLocationsMDAMB231Model = LazyLoading extends LazyLoa
 export declare const LollipopLocationsMDAMB231Model: (new (init: ModelInit<LollipopLocationsMDAMB231Model>) => LollipopLocationsMDAMB231Model)
 
 type EagerModelAliasConnectionModel = {
-  readonly items?: (Alias | null)[] | null;
+  readonly items: (Alias | null)[];
   readonly nextToken?: string | null;
 }
 
 type LazyModelAliasConnectionModel = {
-  readonly items?: (Alias | null)[] | null;
+  readonly items: (Alias | null)[];
   readonly nextToken?: string | null;
 }
 
@@ -576,12 +582,12 @@ export declare type ModelAliasConnectionModel = LazyLoading extends LazyLoadingD
 export declare const ModelAliasConnectionModel: (new (init: ModelInit<ModelAliasConnectionModel>) => ModelAliasConnectionModel)
 
 type EagerModelAuthConnectionModel = {
-  readonly items?: (Auth | null)[] | null;
+  readonly items: (Auth | null)[];
   readonly nextToken?: string | null;
 }
 
 type LazyModelAuthConnectionModel = {
-  readonly items?: (Auth | null)[] | null;
+  readonly items: (Auth | null)[];
   readonly nextToken?: string | null;
 }
 
@@ -590,12 +596,12 @@ export declare type ModelAuthConnectionModel = LazyLoading extends LazyLoadingDi
 export declare const ModelAuthConnectionModel: (new (init: ModelInit<ModelAuthConnectionModel>) => ModelAuthConnectionModel)
 
 type EagerModelDomainConnectionModel = {
-  readonly items?: (Domain | null)[] | null;
+  readonly items: (Domain | null)[];
   readonly nextToken?: string | null;
 }
 
 type LazyModelDomainConnectionModel = {
-  readonly items?: (Domain | null)[] | null;
+  readonly items: (Domain | null)[];
   readonly nextToken?: string | null;
 }
 
@@ -604,12 +610,12 @@ export declare type ModelDomainConnectionModel = LazyLoading extends LazyLoading
 export declare const ModelDomainConnectionModel: (new (init: ModelInit<ModelDomainConnectionModel>) => ModelDomainConnectionModel)
 
 type EagerModelFishConnectionModel = {
-  readonly items?: (Fish | null)[] | null;
+  readonly items: (Fish | null)[];
   readonly nextToken?: string | null;
 }
 
 type LazyModelFishConnectionModel = {
-  readonly items?: (Fish | null)[] | null;
+  readonly items: (Fish | null)[];
   readonly nextToken?: string | null;
 }
 
@@ -618,12 +624,12 @@ export declare type ModelFishConnectionModel = LazyLoading extends LazyLoadingDi
 export declare const ModelFishConnectionModel: (new (init: ModelInit<ModelFishConnectionModel>) => ModelFishConnectionModel)
 
 type EagerModelFlyConnectionModel = {
-  readonly items?: (Fly | null)[] | null;
+  readonly items: (Fly | null)[];
   readonly nextToken?: string | null;
 }
 
 type LazyModelFlyConnectionModel = {
-  readonly items?: (Fly | null)[] | null;
+  readonly items: (Fly | null)[];
   readonly nextToken?: string | null;
 }
 
@@ -632,12 +638,12 @@ export declare type ModelFlyConnectionModel = LazyLoading extends LazyLoadingDis
 export declare const ModelFlyConnectionModel: (new (init: ModelInit<ModelFlyConnectionModel>) => ModelFlyConnectionModel)
 
 type EagerModelGeneLollipopGraphConnectionModel = {
-  readonly items?: (GeneLollipopGraph | null)[] | null;
+  readonly items: (GeneLollipopGraph | null)[];
   readonly nextToken?: string | null;
 }
 
 type LazyModelGeneLollipopGraphConnectionModel = {
-  readonly items?: (GeneLollipopGraph | null)[] | null;
+  readonly items: (GeneLollipopGraph | null)[];
   readonly nextToken?: string | null;
 }
 
@@ -646,12 +652,12 @@ export declare type ModelGeneLollipopGraphConnectionModel = LazyLoading extends 
 export declare const ModelGeneLollipopGraphConnectionModel: (new (init: ModelInit<ModelGeneLollipopGraphConnectionModel>) => ModelGeneLollipopGraphConnectionModel)
 
 type EagerModelGeneLollipopGraphMCF7ConnectionModel = {
-  readonly items?: (GeneLollipopGraphMCF7 | null)[] | null;
+  readonly items: (GeneLollipopGraphMCF7 | null)[];
   readonly nextToken?: string | null;
 }
 
 type LazyModelGeneLollipopGraphMCF7ConnectionModel = {
-  readonly items?: (GeneLollipopGraphMCF7 | null)[] | null;
+  readonly items: (GeneLollipopGraphMCF7 | null)[];
   readonly nextToken?: string | null;
 }
 
@@ -660,12 +666,12 @@ export declare type ModelGeneLollipopGraphMCF7ConnectionModel = LazyLoading exte
 export declare const ModelGeneLollipopGraphMCF7ConnectionModel: (new (init: ModelInit<ModelGeneLollipopGraphMCF7ConnectionModel>) => ModelGeneLollipopGraphMCF7ConnectionModel)
 
 type EagerModelHomoSapiensConnectionModel = {
-  readonly items?: (HomoSapiens | null)[] | null;
+  readonly items: (HomoSapiens | null)[];
   readonly nextToken?: string | null;
 }
 
 type LazyModelHomoSapiensConnectionModel = {
-  readonly items?: (HomoSapiens | null)[] | null;
+  readonly items: (HomoSapiens | null)[];
   readonly nextToken?: string | null;
 }
 
@@ -674,12 +680,12 @@ export declare type ModelHomoSapiensConnectionModel = LazyLoading extends LazyLo
 export declare const ModelHomoSapiensConnectionModel: (new (init: ModelInit<ModelHomoSapiensConnectionModel>) => ModelHomoSapiensConnectionModel)
 
 type EagerModelLollipopLocationsConnectionModel = {
-  readonly items?: (LollipopLocations | null)[] | null;
+  readonly items: (LollipopLocations | null)[];
   readonly nextToken?: string | null;
 }
 
 type LazyModelLollipopLocationsConnectionModel = {
-  readonly items?: (LollipopLocations | null)[] | null;
+  readonly items: (LollipopLocations | null)[];
   readonly nextToken?: string | null;
 }
 
@@ -688,12 +694,12 @@ export declare type ModelLollipopLocationsConnectionModel = LazyLoading extends 
 export declare const ModelLollipopLocationsConnectionModel: (new (init: ModelInit<ModelLollipopLocationsConnectionModel>) => ModelLollipopLocationsConnectionModel)
 
 type EagerModelLollipopLocationsMCF7ConnectionModel = {
-  readonly items?: (LollipopLocationsMCF7 | null)[] | null;
+  readonly items: (LollipopLocationsMCF7 | null)[];
   readonly nextToken?: string | null;
 }
 
 type LazyModelLollipopLocationsMCF7ConnectionModel = {
-  readonly items?: (LollipopLocationsMCF7 | null)[] | null;
+  readonly items: (LollipopLocationsMCF7 | null)[];
   readonly nextToken?: string | null;
 }
 
@@ -702,12 +708,12 @@ export declare type ModelLollipopLocationsMCF7ConnectionModel = LazyLoading exte
 export declare const ModelLollipopLocationsMCF7ConnectionModel: (new (init: ModelInit<ModelLollipopLocationsMCF7ConnectionModel>) => ModelLollipopLocationsMCF7ConnectionModel)
 
 type EagerModelLollipopLocationsMDAMB231ConnectionModel = {
-  readonly items?: (LollipopLocationsMDAMB231 | null)[] | null;
+  readonly items: (LollipopLocationsMDAMB231 | null)[];
   readonly nextToken?: string | null;
 }
 
 type LazyModelLollipopLocationsMDAMB231ConnectionModel = {
-  readonly items?: (LollipopLocationsMDAMB231 | null)[] | null;
+  readonly items: (LollipopLocationsMDAMB231 | null)[];
   readonly nextToken?: string | null;
 }
 
@@ -716,12 +722,12 @@ export declare type ModelLollipopLocationsMDAMB231ConnectionModel = LazyLoading 
 export declare const ModelLollipopLocationsMDAMB231ConnectionModel: (new (init: ModelInit<ModelLollipopLocationsMDAMB231ConnectionModel>) => ModelLollipopLocationsMDAMB231ConnectionModel)
 
 type EagerModelMouseConnectionModel = {
-  readonly items?: (Mouse | null)[] | null;
+  readonly items: (Mouse | null)[];
   readonly nextToken?: string | null;
 }
 
 type LazyModelMouseConnectionModel = {
-  readonly items?: (Mouse | null)[] | null;
+  readonly items: (Mouse | null)[];
   readonly nextToken?: string | null;
 }
 
@@ -730,12 +736,12 @@ export declare type ModelMouseConnectionModel = LazyLoading extends LazyLoadingD
 export declare const ModelMouseConnectionModel: (new (init: ModelInit<ModelMouseConnectionModel>) => ModelMouseConnectionModel)
 
 type EagerModelNematodeConnectionModel = {
-  readonly items?: (Nematode | null)[] | null;
+  readonly items: (Nematode | null)[];
   readonly nextToken?: string | null;
 }
 
 type LazyModelNematodeConnectionModel = {
-  readonly items?: (Nematode | null)[] | null;
+  readonly items: (Nematode | null)[];
   readonly nextToken?: string | null;
 }
 
@@ -744,12 +750,12 @@ export declare type ModelNematodeConnectionModel = LazyLoading extends LazyLoadi
 export declare const ModelNematodeConnectionModel: (new (init: ModelInit<ModelNematodeConnectionModel>) => ModelNematodeConnectionModel)
 
 type EagerModelPlantConnectionModel = {
-  readonly items?: (Plant | null)[] | null;
+  readonly items: (Plant | null)[];
   readonly nextToken?: string | null;
 }
 
 type LazyModelPlantConnectionModel = {
-  readonly items?: (Plant | null)[] | null;
+  readonly items: (Plant | null)[];
   readonly nextToken?: string | null;
 }
 
@@ -758,12 +764,12 @@ export declare type ModelPlantConnectionModel = LazyLoading extends LazyLoadingD
 export declare const ModelPlantConnectionModel: (new (init: ModelInit<ModelPlantConnectionModel>) => ModelPlantConnectionModel)
 
 type EagerModelRatConnectionModel = {
-  readonly items?: (Rat | null)[] | null;
+  readonly items: (Rat | null)[];
   readonly nextToken?: string | null;
 }
 
 type LazyModelRatConnectionModel = {
-  readonly items?: (Rat | null)[] | null;
+  readonly items: (Rat | null)[];
   readonly nextToken?: string | null;
 }
 
@@ -772,12 +778,12 @@ export declare type ModelRatConnectionModel = LazyLoading extends LazyLoadingDis
 export declare const ModelRatConnectionModel: (new (init: ModelInit<ModelRatConnectionModel>) => ModelRatConnectionModel)
 
 type EagerModelYeastConnectionModel = {
-  readonly items?: (Yeast | null)[] | null;
+  readonly items: (Yeast | null)[];
   readonly nextToken?: string | null;
 }
 
 type LazyModelYeastConnectionModel = {
-  readonly items?: (Yeast | null)[] | null;
+  readonly items: (Yeast | null)[];
   readonly nextToken?: string | null;
 }
 
