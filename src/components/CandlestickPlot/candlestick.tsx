@@ -180,10 +180,9 @@ export class CandlestickResults extends React.Component<CandlestickProps, Candle
         
         API.graphql(graphqlOperation(getGeneLollipopGraph, query)).then(secondQueryResult => {//query second database
         const filteredMCF7 = this.filterLocations(secondQueryResult.data.getGeneLollipopGraph.lollipopLocationsMCF7.items)
-        })
+
         API.graphql(graphqlOperation(getGeneLollipopGraph, query)).then(ThirdQueryResult => {//query second database
         const filteredMDAMB231 = this.filterLocations(ThirdQueryResult.data.getGeneLollipopGraph.lollipopLocationsMDAMB231.items)
-        })
             const xMax:number = parseInt(result.data.getGeneLollipopGraph.numberOfAAS)
 
             const domains = result.data.getGeneLollipopGraph.domains.items.map(domain => {
@@ -221,6 +220,8 @@ export class CandlestickResults extends React.Component<CandlestickProps, Candle
               }
             })
             this.updateState(filteredLocations, filteredMCF7, filteredMDAMB231)
+        })
+        })
         }).catch(err => {
           console.log(err)
         })
