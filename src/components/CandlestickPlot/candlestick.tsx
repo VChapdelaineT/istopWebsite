@@ -170,57 +170,61 @@ export class CandlestickResults extends React.Component<CandlestickProps, Candle
   };
 
   handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    const query = { id: this.state.gene };
-
-    try {
-      const result: any = await API.graphql(graphqlOperation(getGeneLollipopGraph, query));
-      const payload = result?.data?.getGeneLollipopGraph;
-
-      const filteredMCF10A = this.filterLocations(payload?.lollipopLocations?.items ?? []);
-      const filteredMCF7 = this.filterLocations(payload?.lollipopLocationsMCF7?.items ?? []);
-      const filteredMDAMB231 = this.filterLocations(payload?.lollipopLocationsMDAMB231?.items ?? []);
-
-      const xMax: number = parseInt(String(payload?.numberOfAAS ?? "0")) || 0;
-
-      const domains = (payload?.domains?.items ?? []).map((domain: any) => {
-        const domainEnd = domain.end > xMax ? xMax : domain.end;
-        return {
-          startCodon: domain.start,
-          endCodon: domainEnd,
-          label: domain.identifier,
-          color: domain.color,
-          tooltip: {
-            header: domain.identifier,
-            body: (
-              <div>
-                Identifier: {domain.identifier}<br />
-                Start: {domain.start}<br />
-                End: {domainEnd}
-              </div>
-            )
-          }
+        e.preventDefault()
+        const query = {
+          id: this.state.gene
         };
-      }).sort((a: any, b: any) => (a.startCodon - b.startCodon) || (a.endCodon - b.endCodon));
 
-      this.setState(prev => ({
-        ...prev,
-        numberOfAAS: payload?.numberOfAAS ?? 0,
-        transcriptId: payload?.transcriptId ?? "",
-        displayGene: this.state.gene,
-        domains,
-        xMax,
-        curPressedCell: filteredMCF7.length === 0 ? "MCF10A" : prev.curPressedCell,
-        radioCheckedCell: filteredMCF7.length === 0
-          ? new Map<string, boolean>([["MCF10A", true], ["MCF7", false], ["MDAMB231", false]])
-          : prev.radioCheckedCell
-      }));
+        API.graphql(graphqlOperation(getGeneLollipopGraph2, query)).then(result => { //query first database
+        const filteredLocations = this.filterLocations(result.data.getGeneLollipopGraph.lollipopLocations.items)
+        
+        API.graphql(graphqlOperation(getGeneLollipopGraph, query)).then(secondQueryResult => {//query second database
+        const filteredMCF7 = this.filterLocations(secondQueryResult.data.getGeneLollipopGraph.lollipopLocationsMCF7.items)
+        })
+        API.graphql(graphqlOperation(getGeneLollipopGraph, query)).then(ThirdQueryResult => {//query second database
+        const filteredMDAMB231 = this.filterLocations(ThirdQueryResult.data.getGeneLollipopGraph.lollipopLocationsMDAMB231.items)
+        })
+            const xMax:number = parseInt(result.data.getGeneLollipopGraph.numberOfAAS)
 
-      this.updateState(filteredMCF10A, filteredMCF7, filteredMDAMB231);
-    } catch (err) {
-      console.error(err);
+            const domains = result.data.getGeneLollipopGraph.domains.items.map(domain => {
+              var domainEnd = domain.end > xMax ? xMax : domain.end;
+    
+  
+              return {
+                startCodon: domain.start,
+                endCodon: domainEnd,
+                label: domain.identifier,
+                color: domain.color,
+                tooltip: {
+                  header:domain.identifier,
+                  body: (<div>Identifier: {domain.identifier}<br/>Start: {domain.start}<br/>End: {domainEnd}</div>)
+                }
+              }
+            })
+            const sortedDomains = domains.sort((domain1, domain2) => {
+              const startDiff:number = domain1.startCodon - domain2.startCodon
+              if(startDiff==0) {
+                return domain1.endCodon - domain2.endCodon;
+              }
+              return -1;
+            })
+            this.setState(prevState => {
+              return {
+                ...prevState,
+                numberOfAAS: result.data.getGeneLollipopGraph.numberOfAAS,
+                transcriptId: result.data.getGeneLollipopGraph.transcriptId,
+                displayGene: this.state.gene,
+                domains: sortedDomains,
+                xMax: xMax,
+                curPressedCell: filteredMCF7.length == 0 ? "MCF10A" : prevState.curPressedCell,
+                radioCheckedCell: filteredMCF7.length == 0 ? new Map<string,boolean>([["MCF10A", true], ["MCF7", false], ["MDAMB231", false]]) : prevState.radioCheckedCell
+              }
+            })
+            this.updateState(filteredLocations, filteredMCF7, filteredMDAMB231)
+        }).catch(err => {
+          console.log(err)
+        })
     }
-  };
 
   lollipopUIState = (location: any, isSelected: boolean) => {
     return {
