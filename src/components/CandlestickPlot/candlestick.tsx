@@ -36,6 +36,7 @@ const getGeneLollipopGraph = /* GraphQL */ `query GetGeneLollipopGraph($id: ID!)
           pvalueOLAP
           fdrOLAP
           lfcDOX
+          nlfcUNT
           pvalueDOX
           fdrDOX
           lfcCPT
@@ -71,6 +72,7 @@ const getGeneLollipopGraph = /* GraphQL */ `query GetGeneLollipopGraph($id: ID!)
           pvalueDOX
           fdrDOX
           lfcCPT
+          nlfcUNT
           pvalueCPT
           fdrCPT
           tCGA
@@ -182,10 +184,16 @@ const defaultHiddenHeaders: string[] = [];
 const tableHeaders = [
   'gene','sgRNASequence','function','aachg','clinVar','clinVar_ID',
   'lfcUNT','nlfcUNT','pvalueUNT','fdrUNT',
-  'lfcCISP','nlfcCISP','pvalueCISP','fdrCISP',
-  'lfcCPT','nlfcCPT','pvalueCPT','fdrCPT',
-  'lfcDOX','nlfcDOX','pvalueDOX','fdrDOX',
-  'lfcOLAP','nlfcOLAP','pvalueOLAP','fdrOLAP',
+  'lfcCISP','pvalueCISP','fdrCISP',
+  'lfcCPT','pvalueCPT','fdrCPT',
+  'lfcDOX','pvalueDOX','fdrDOX',
+  'lfcOLAP','pvalueOLAP','fdrOLAP',
+  'tCGA','pTMsiteLoc','noncanonicalTranscript','cellLine'
+];
+
+const tableHeadersUNT = [
+  'gene','sgRNASequence','function','aachg','clinVar','clinVar_ID',
+  'lfcUNT','nlfcUNT','pvalueUNT','fdrUNT',
   'tCGA','pTMsiteLoc','noncanonicalTranscript','cellLine'
 ];
 
@@ -204,10 +212,6 @@ const tableHeaderTranslation = new Map<string, string>([
   ['fdrCISP', 'FDR Cisplatin'],
   ['lfcCPT', 'LFC Camptothecin'],
   ['nlfcUNT', 'nLFC Untreated'],
-  ['nlfcCISP', 'nLFC Cisplatin'],
-  ['nlfcDOX', 'nLFC Doxorubicin'],
-  ['nlfcOLAP', 'nLFC Olaparib'],
-  ['nlfcCPT', 'nLFC Camptothecin'],
   ['pvalueCPT', 'P-Value Camptothecin'],
   ['fdrCPT', 'FDR Camptothecin'],
   ['lfcDOX', 'LFC Doxorubicin'],
@@ -545,15 +549,12 @@ export class CandlestickResults extends React.Component<CandlestickProps, Candle
       pvalueCISP: Number(l.pvalueCISP),
       fdrCISP: Number(l.fdrCISP),
       lfcCPT: Number(l.lfcCPT),
-      nlfcCPT: Number(l.nlfcCPT),
       pvalueCPT: Number(l.pvalueCPT),
       fdrCPT: Number(l.fdrCPT),
       lfcDOX: Number(l.lfcDOX),
-      nlfcDOX: Number(l.nlfcDOX),
       pvalueDOX: Number(l.pvalueDOX),
       fdrDOX: Number(l.fdrDOX),
       lfcOLAP: Number(l.lfcOLAP),
-      nlfcOLAP: Number(l.nlfcOLAP),
       pvalueOLAP: Number(l.pvalueOLAP),
       fdrOLAP: Number(l.fdrOLAP),
     }));
@@ -567,22 +568,26 @@ export class CandlestickResults extends React.Component<CandlestickProps, Candle
       if (subset.length > 0) tableLollipops = subset;
     }
 
+// Pick headers based on current pressed cell
+    const headersToUse =
+      this.state.curPressedCell === "MDAMB231" ? tableHeadersUNT : tableHeaders;
+
     const displayLollipops = tableLollipops.map(l => {
       const obj: Record<string, any> = {};
-      tableHeaders.forEach(h => (obj[h] = l[h]));
+      headersToUse.forEach(h => (obj[h] = l[h]));
       return obj;
     });
 
-    const bootStrapHeaders = tableHeaders.map(header => ({
+    const bootStrapHeaders = headersToUse.map(header => ({
       dataField: header,
       text: tableHeaderTranslation.get(header) || header,
       sort: true,
-      order: 'asc' as const,
+      order: "asc" as const,
       hidden: defaultHiddenHeaders.includes(header),
       classes: (cell: any, row: any, rowIndex: number, colIndex: number) =>
-        colIndex === 1 ? 'breakAll helvetica' : 'breakWords helvetica',
-      sortFunc: (a: any, b: any, order: 'asc' | 'desc') => {
-        if (order === 'asc') return a > b ? 1 : -1;
+        colIndex === 1 ? "breakAll helvetica" : "breakWords helvetica",
+      sortFunc: (a: any, b: any, order: "asc" | "desc") => {
+        if (order === "asc") return a > b ? 1 : -1;
         return a > b ? -1 : 1;
       }
     }));
